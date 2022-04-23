@@ -1,0 +1,14 @@
+.socialIconContainer {
+  display: inline;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.socialIcon {
+  font-size: 2rem;
+  color: var(vColor, black);
+}
+
+.socialIcon:hover {
+  color: rgb(255, 241, 42);
+}

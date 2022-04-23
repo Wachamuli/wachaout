@@ -1,0 +1,26 @@
+.btn {
+  cursor: pointer;
+  background: white;
+  color: #c9050b;
+  padding: 0.5rem;
+  border: 3px solid black;
+  width: 30%;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  /* box-shadow: -5px 5px black; */
+  box-shadow: -3px 3px 0px 3px black;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  color: rgb(0, 0, 0);
+  background: rgb(255, 241, 42);
+  box-shadow: none;
+}
+
+.icon {
+  margin-left: 5px;
+}

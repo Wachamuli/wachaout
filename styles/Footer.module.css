@@ -1,0 +1,52 @@
+#footer {
+  position: absolute;
+  bottom: 0;
+  background:#212121;
+  height: auto;
+  width: 100%;
+}
+
+#gotoBtnContainer {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  width: fit-content;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+#gotoBtn {
+  color: #ffff;
+}
+
+#topFooter {
+  text-align: center;
+  padding: 1rem;
+}
+
+.logo {
+  color: rgb(236, 236, 236);
+}
+
+.summaryContainer {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 15rem;
+  margin-left: 15rem;
+}
+
+.summary {
+  text-align: center;
+}
+
+.socialIconsContainer {
+  margin: 1rem;
+}
+
+.host {
+  color: rgb(236, 236, 236);
+}
+
+#bottomFooter {
+  background: #a51212;
+  padding: 1.5rem;
+}

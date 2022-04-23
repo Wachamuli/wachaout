@@ -1,0 +1,55 @@
+.card {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-top: 14rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  transition: all 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: "#c9050c";
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 15px 25px;
+}
+
+.cardContainer {
+  background: #c9050c;
+  /* color: black; */
+  font-size: 1.1rem;
+  padding: 1.5rem;
+  border-radius: 0px 0px 10px 10px;
+  transition: all 0.5s;
+}
+
+.statusDate {
+  color: white;
+}
+
+.title {
+  color: white;
+  font-size: 26.4px;
+  margin-bottom: 4px;
+  border-bottom: 2px solid white;
+  letter-spacing: 1px;
+}
+
+.paragraph {
+  color: white;
+}
+
+.btnContainer {
+  text-align: center;
+}
+
+.seeMore {
+  font-family: "Fira Sans";
+  margin-top: 10px;
+  text-align: right;
+  background: white;
+  color: #c9050c;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+}

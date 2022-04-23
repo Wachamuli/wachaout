@@ -1,0 +1,24 @@
+.card {
+  border: 3px solid #f3f3f3;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.header {
+  display: flex;
+}
+
+.icon {
+  margin-left: auto;
+  align-self: center;
+  font-size: 1.5rem;
+}
+
+.title {
+  color: black;
+}
+
+.description {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

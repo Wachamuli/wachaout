@@ -1,0 +1,17 @@
+.title {
+  font: bold 2.5rem "Fugaz One";
+  position: relative;
+  color: black;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.title:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-bottom: 10px solid #c9050b;
+  border-radius: 10px;
+  width: 50px;
+  bottom: 0;
+}

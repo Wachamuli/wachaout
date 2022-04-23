@@ -1,0 +1,108 @@
+#navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 7rem;
+  padding-left: 7rem;
+  font-weight: 700;
+  background: #f90716;
+  z-index: 99;
+}
+
+.logo {
+  color: #ffff;
+}
+
+#logoContainer {
+  margin-right: auto;
+  padding: 1rem;
+  align-self: center;
+}
+
+#routesContainer {
+  display: flex;
+}
+
+#routesContainer * {
+  align-self: center;
+}
+
+.routeContainer {
+  align-self: center;
+  margin: 10px;
+  margin-right: 20px;
+}
+
+.route {
+  color: #ffff;
+  padding: 0.5rem;
+  align-self: center;
+}
+
+.route:hover:not(.activeRoute),
+.route:focus:not(.activeRoute),
+.route:active:not(.activeRoute) {
+  color: rgb(221, 219, 219);
+}
+
+.activeRoute {
+  position: relative;
+}
+
+.activeRoute::after {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border: 1px solid white;
+  border-radius: 10px;
+  border-bottom: 4px solid white;
+}
+
+#serviceMenu {
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+  top: 4rem;
+  height: 0;
+  transition: ease 0.2s;
+  text-align: left;
+  background: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+}
+
+#serviceMenu li {
+  color: #f90716;
+  display: inline;
+}
+
+.servicesContainer .view {
+  color: #f90716;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.icon {
+  margin-left: 5px;
+}
+
+.support {
+  border-radius: 8px;
+  background: white;
+  padding: 0.5rem;
+  background: rgb(255, 241, 42);
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.supportBtn {
+  color: black;
+  padding: 0.5rem;
+}

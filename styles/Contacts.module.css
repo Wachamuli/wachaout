@@ -1,0 +1,79 @@
+.contactsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  border-right: 3px solid black;
+  padding-right: 1rem;
+}
+
+.formContainer input,
+.formContainer textarea,
+.formContainer button {
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+.topControls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.topControls input {
+  font-size: 1.1rem;
+  width: 100%;
+  padding-left: 8px;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  border-style: solid;
+  border-radius: 10px;
+}
+
+#textarea {
+  margin-bottom: 8px;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  padding-left: 8px;
+  font-family: "Fira Sans";
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+.submitBtn {
+  cursor: pointer;
+  line-height: normal;
+  background-color: black;
+  border-style: solid;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  padding: 1rem;
+}
+
+.controlLabel {
+  color: black;
+}
+
+.emails {
+  padding: 1rem;
+  align-self: center;
+}
+
+.subtitle {
+  color: black;
+}
+
+.socialIconsContainer {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.address {
+  margin-bottom: 0.5rem;
+}
