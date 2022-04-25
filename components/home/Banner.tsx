@@ -20,19 +20,22 @@ function Banner() {
               <ButtonLink
                 content="Developer"
                 href="/services/developer"
-                fontFamily="Anton"
                 icon={faCode}
+                animation="hvr-icon-up"
+                fontFamily="Anton"
               />
               <ButtonLink
                 content="Podcaster"
                 href="/services/podcaster"
-                fontFamily="Righteous"
                 icon={faMicrophone}
+                animation="hvr-icon-up"
+                fontFamily="Righteous"
               />
               <ButtonLink
                 content="Illustrator"
                 href="/services/illustrator"
                 icon={faPalette}
+                animation="hvr-icon-up"
                 fontFamily="Lobster Two"
                 fontWeight="bold"
               />

@@ -8,16 +8,27 @@ interface Props {
   content: string;
   href: string;
   icon: IconDefinition;
+  animation?: string;
   fontFamily?: string;
   fontWeight?: string;
 }
 
-function ButtonLink({ content, href, icon, fontFamily, fontWeight }: Props) {
+function ButtonLink({
+  content,
+  href,
+  icon,
+  animation,
+  fontFamily,
+  fontWeight,
+}: Props) {
   return (
     <Link href={href}>
-      <a className={style.btn} style={{ fontFamily, fontWeight }}>
+      <a
+        className={`${animation} ${style.btn}`}
+        style={{ fontFamily, fontWeight }}
+      >
         {content}
-        <FontAwesomeIcon className={style.icon} icon={icon} />
+        <FontAwesomeIcon className={`hvr-icon ${style.icon}`} icon={icon} />
       </a>
     </Link>
   );

@@ -3,7 +3,12 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown, faCode } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAngleDown,
+  faCode,
+  faMicrophone,
+  faPalette,
+} from "@fortawesome/free-solid-svg-icons";
 
 import ActiveLink from "./ActiveLink";
 import style from "../styles/Navbar.module.css";
@@ -111,10 +116,10 @@ function Navbar() {
               </Link>
             </div>
             <div className={style.routeMenu}>
-              <Link href="/services/developer">
+              <Link href="/services/podcaster">
                 <a className={style.routeTitle}>
-                  Developer
-                  <FontAwesomeIcon icon={faCode} />
+                  Podcaster
+                  <FontAwesomeIcon icon={faMicrophone} />
                   <p className={style.description}>
                     Lorem ipsum dolor sit amet
                   </p>
@@ -122,10 +127,10 @@ function Navbar() {
               </Link>
             </div>
             <div className={style.routeMenu}>
-              <Link href="/services/developer">
+              <Link href="/services/illustrator">
                 <a className={style.routeTitle}>
-                  Developer
-                  <FontAwesomeIcon icon={faCode} />
+                  Illustrator
+                  <FontAwesomeIcon icon={faPalette} />
                   <p className={style.description}>
                     Lorem ipsum dolor sit amet
                   </p>
