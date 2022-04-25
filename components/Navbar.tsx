@@ -3,20 +3,47 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAngleDown,
-  faCode,
-} from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faCode } from "@fortawesome/free-solid-svg-icons";
 
 import ActiveLink from "./ActiveLink";
 import style from "../styles/Navbar.module.css";
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const serviceMenu = useRef<HTMLDivElement>(null);
   const servicesLabel = useRef<HTMLLIElement>(null);
-
   const router = useRouter();
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent): void {
+      const isMenuClicked = serviceMenu.current?.contains(e.target as Node);
+      const isLabelClicked = servicesLabel.current?.contains(e.target as Node);
+      console.log("you clicked");
+
+      if (!isMenuClicked && !isLabelClicked) {
+        setIsOpen(false);
+      }
+    }
+
+    const serviceMenuStyle = serviceMenu.current?.style;
+
+    if (isOpen) {
+      serviceMenuStyle!.height = "fit-content";
+      serviceMenuStyle!.padding = "0.5rem";
+      document.addEventListener("click", handleClickOutside);
+    } else {
+      serviceMenuStyle!.height = "0px";
+      serviceMenuStyle!.padding = "0px";
+    }
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [isOpen, serviceMenu, servicesLabel]);
+
+  function toggleServicesMenu() {
+    setIsOpen((isOpen) => !isOpen);
+  }
 
   function serviceRouter(): { name: string; pathname: string } {
     const splittedRoute = router.asPath.split("/");
@@ -30,38 +57,6 @@ function Navbar() {
       ? { name, pathname }
       : { name: "SERVICES", pathname: "" };
   }
-
-  function toggleServicesMenu() {
-    setIsOpen((prevIsOpen) => !prevIsOpen);
-  }
-
-  useEffect(() => {
-    function handleClickOutside(e: MouseEvent): void {
-      const isMenuClicked = serviceMenu.current?.contains(e.target as Node);
-      const isLabelClicked = servicesLabel.current?.contains(e.target as Node);
-
-      if (!isMenuClicked && !isLabelClicked) {
-        setIsOpen(false);
-      }
-    }
-
-    function setOpenedMenuStyle(): void {
-      const serviceMenuStyle = serviceMenu.current?.style;
-      if (isOpen) {
-        serviceMenuStyle!.height = "fit-content";
-        serviceMenuStyle!.padding = "0.5rem";
-      } else {
-        serviceMenuStyle!.height = "0px";
-        serviceMenuStyle!.padding = "0px";
-      }
-    }
-
-    if (isOpen) document.addEventListener("click", handleClickOutside);
-    setOpenedMenuStyle();
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, [isOpen]);
 
   return (
     <nav id={style.navbar}>
@@ -141,17 +136,26 @@ function Navbar() {
 
           <div id={style.routesMenuRight} className={style.routesMenuContainer}>
             <div className={style.routeMenu}>
-              <div className={style.gallery} style={{ backgroundImage: `url("/placeholders/code.jpg")`}}>
+              <div
+                className={style.gallery}
+                style={{ backgroundImage: `url("/placeholders/code.jpg")` }}
+              >
                 <h1 className={style.galleryName}>CodeMadness</h1>
               </div>
             </div>
             <div className={style.routeMenu}>
-              <div className={style.gallery} style={{ backgroundImage: `url("/placeholders/podcast.jpg")`}}>
+              <div
+                className={style.gallery}
+                style={{ backgroundImage: `url("/placeholders/podcast.jpg")` }}
+              >
                 <h1 className={style.galleryName}>Talking Sh*t</h1>
               </div>
             </div>
             <div className={style.routeMenu}>
-              <div className={style.gallery} style={{ backgroundImage: `url("/placeholders/draw.jpg")`}}>
+              <div
+                className={style.gallery}
+                style={{ backgroundImage: `url("/placeholders/draw.jpg")` }}
+              >
                 <h1 className={style.galleryName}>Magnum Opus</h1>
               </div>
             </div>

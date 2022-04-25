@@ -20,19 +20,19 @@ function Resources() {
           <Resource
             name="Vue.js"
             tagline="The Progressive JavaScript Framework"
-            image="/static/Resources_logo/vuejs.png"
+            image="/resources/vuejs.png"
             height="100px"
           />
           <Resource
             name="Bootstrap"
             tagline="Build fast, responsive sites"
-            image="/static/Resources_logo/bootstrap.png"
+            image="/resources/bootstrap.png"
             height="180px"
           />
           <Resource
             name="Font Awesome"
             tagline="Take the hassle out of icons in your projects"
-            image="/static/Resources_logo/fontawesome.png"
+            image="/resources/fontawesome.png"
             height="50px"
           />
         </ResourceCard>
@@ -47,19 +47,19 @@ function Resources() {
           <Resource
             name="Django"
             tagline="The web framework for perfectionists with deadlines"
-            image="/static/Resources_logo/django.png"
+            image="/resources/django.png"
             height="300px"
           />
           <Resource
             name="Flask"
             tagline="Web development, one drop at a time"
-            image="/static/Resources_logo/flask.png"
+            image="/resources/flask.png"
             height="140px"
           />
           <Resource
             name="Next.js"
             tagline="The React Framework for Production"
-            image="/static/Resources_logo/nextjs.png"
+            image="/resources/nextjs.png"
           />
         </ResourceCard>
       </div>

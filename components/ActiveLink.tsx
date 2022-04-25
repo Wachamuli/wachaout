@@ -10,7 +10,7 @@ interface Props {
 
 function ActiveLink({ href, children, className }: Props) {
   const router = useRouter();
-  const getActiveStyle = router.asPath === href ? className : undefined;
+  const getActiveStyle = router.asPath === href ? className : null;
 
   function handleClick(e: React.MouseEvent<HTMLAnchorElement>): void {
     e.preventDefault();
