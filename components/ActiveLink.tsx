@@ -4,7 +4,7 @@ import style from "../styles/Navbar.module.css";
 
 interface Props {
   href: string;
-  className: string;
+  className?: string;
   children?: string | JSX.Element[];
 }
 
@@ -14,7 +14,9 @@ function ActiveLink({ href, children, className }: Props) {
 
   function handleClick(e: React.MouseEvent<HTMLAnchorElement>): void {
     e.preventDefault();
-    router.push(href);
+    if (href) {
+      router.push(href);
+    }
   }
 
   return (

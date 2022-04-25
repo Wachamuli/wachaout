@@ -1,6 +1,7 @@
+import { StaticImageData } from "next/image";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowRight } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
 
 import style from "../styles/GalleryCard.module.css";
 
@@ -33,7 +34,7 @@ function GalleryCard({
               <div className={style.statusDate}>
                 <label>
                   <span className={style.status}>last update</span>{" "}
-                  <span className={style.date}>/3/2022</span>
+                  <span className={style.date}>19/3/2022</span>
                 </label>
               </div>
               <h1 className={style.title} style={{ fontFamily, fontSize }}>

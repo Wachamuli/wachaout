@@ -1,24 +1,38 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAngleDown,
   faCode,
-  faMicrophone,
-  faPalette,
 } from "@fortawesome/free-solid-svg-icons";
 
-import style from "../styles/Navbar.module.css";
 import ActiveLink from "./ActiveLink";
+import style from "../styles/Navbar.module.css";
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const serviceMenu = useRef<HTMLDivElement>(null);
-  const servicesLabel = useRef<HTMLLabelElement>(null);
+  const servicesLabel = useRef<HTMLLIElement>(null);
+
+  const router = useRouter();
+
+  function serviceRouter(): { name: string; pathname: string } {
+    const splittedRoute = router.asPath.split("/");
+    const lastRoute = splittedRoute.length - 1;
+
+    const name = splittedRoute[lastRoute];
+    const pathname = `/services/${name}`;
+    const isServiceRoute = router.asPath.indexOf("/services") === 0;
+
+    return isServiceRoute
+      ? { name, pathname }
+      : { name: "SERVICES", pathname: "" };
+  }
 
   function toggleServicesMenu() {
-    setIsOpen(!isOpen);
+    setIsOpen((prevIsOpen) => !prevIsOpen);
   }
 
   useEffect(() => {
@@ -26,38 +40,28 @@ function Navbar() {
       const isMenuClicked = serviceMenu.current?.contains(e.target as Node);
       const isLabelClicked = servicesLabel.current?.contains(e.target as Node);
 
-      if (isOpen && !isMenuClicked && !isLabelClicked) {
+      if (!isMenuClicked && !isLabelClicked) {
         setIsOpen(false);
       }
     }
 
-    function openMenu(): void {
+    function setOpenedMenuStyle(): void {
       const serviceMenuStyle = serviceMenu.current?.style;
       if (isOpen) {
         serviceMenuStyle!.height = "fit-content";
-        serviceMenuStyle!.padding = "1rem";
+        serviceMenuStyle!.padding = "0.5rem";
       } else {
         serviceMenuStyle!.height = "0px";
         serviceMenuStyle!.padding = "0px";
       }
     }
 
-    document.addEventListener("click", handleClickOutside);
-    openMenu();
+    if (isOpen) document.addEventListener("click", handleClickOutside);
+    setOpenedMenuStyle();
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
   }, [isOpen]);
-
-  const router = useRouter();
-  const isServiceRoute = router.asPath.indexOf("/services") === 0;
-
-  function currentRoute(): string {
-    const splittedRoute = router.asPath.split("/");
-    const lastRoute = splittedRoute.length - 1;
-    const route = splittedRoute[lastRoute];
-    return route;
-  }
 
   return (
     <nav id={style.navbar}>
@@ -67,28 +71,19 @@ function Navbar() {
 
       <ul id={style.routesContainer}>
         <li className={style.routeContainer}>
-          <ActiveLink className={`${style.activeRoute}`} href="/">
+          <ActiveLink className={style.activeRoute} href="/">
             HOME
           </ActiveLink>
         </li>
 
-        <li>
-          <div onClick={toggleServicesMenu}>
-            {isServiceRoute ? (
-              <ActiveLink
-                href={`/services/${currentRoute().toLowerCase()}`}
-                className={style.activeRoute}
-              >
-                <label>{currentRoute().toUpperCase()}</label>
-                <FontAwesomeIcon className={style.icon} icon={faAngleDown} />
-              </ActiveLink>
-            ) : (
-              <label className={style.route} ref={servicesLabel}>
-                SERVICES
-                <FontAwesomeIcon className={style.icon} icon={faAngleDown} />
-              </label>
-            )}
-          </div>
+        <li onClick={toggleServicesMenu} ref={servicesLabel}>
+          <ActiveLink
+            className={style.activeRoute}
+            href={serviceRouter().pathname}
+          >
+            <label>{serviceRouter().name.toUpperCase()}</label>
+            <FontAwesomeIcon className={style.icon} icon={faAngleDown} />
+          </ActiveLink>
         </li>
 
         <li className={style.routeContainer}>
@@ -105,28 +100,62 @@ function Navbar() {
       </ul>
 
       {/* Every selection in components? */}
-      <div id={style.serviceMenu} ref={serviceMenu}>
-        <div className={style.servicesContainer}>
-          <Link href="/services/developer">
-            <a className={style.view}>
-              Developer
-              <FontAwesomeIcon className={style.icon} icon={faCode} />
-            </a>
-          </Link>
-          <i className="icon fas fa-code"></i>
-          <Link href="/services/illustrator">
-            <a className={style.view}>
-              Illustrator
-              <FontAwesomeIcon className={style.icon} icon={faPalette} />
-            </a>
-          </Link>
-          <i className="icon fas fa-palette"></i>
-          <Link href="/services/podcaster">
-            <a className={style.view}>
-              Podcaster
-              <FontAwesomeIcon className={style.icon} icon={faMicrophone} />
-            </a>
-          </Link>
+      <div id={style.servicesMenu} ref={serviceMenu}>
+        <h1>Services</h1>
+        <div className={style.menuContainer}>
+          <div id={style.routesMenuLeft} className={style.routesMenuContainer}>
+            <div className={style.routeMenu}>
+              <Link href="/services/developer">
+                <a className={style.routeTitle}>
+                  Developer
+                  <FontAwesomeIcon icon={faCode} />
+                  <p className={style.description}>
+                    Lorem ipsum dolor sit amet
+                  </p>
+                </a>
+              </Link>
+            </div>
+            <div className={style.routeMenu}>
+              <Link href="/services/developer">
+                <a className={style.routeTitle}>
+                  Developer
+                  <FontAwesomeIcon icon={faCode} />
+                  <p className={style.description}>
+                    Lorem ipsum dolor sit amet
+                  </p>
+                </a>
+              </Link>
+            </div>
+            <div className={style.routeMenu}>
+              <Link href="/services/developer">
+                <a className={style.routeTitle}>
+                  Developer
+                  <FontAwesomeIcon icon={faCode} />
+                  <p className={style.description}>
+                    Lorem ipsum dolor sit amet
+                  </p>
+                </a>
+              </Link>
+            </div>
+          </div>
+
+          <div id={style.routesMenuRight} className={style.routesMenuContainer}>
+            <div className={style.routeMenu}>
+              <div className={style.gallery} style={{ backgroundImage: `url("/placeholders/code.jpg")`}}>
+                <h1 className={style.galleryName}>CodeMadness</h1>
+              </div>
+            </div>
+            <div className={style.routeMenu}>
+              <div className={style.gallery} style={{ backgroundImage: `url("/placeholders/podcast.jpg")`}}>
+                <h1 className={style.galleryName}>Talking Sh*t</h1>
+              </div>
+            </div>
+            <div className={style.routeMenu}>
+              <div className={style.gallery} style={{ backgroundImage: `url("/placeholders/draw.jpg")`}}>
+                <h1 className={style.galleryName}>Magnum Opus</h1>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
