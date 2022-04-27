@@ -1,5 +1,5 @@
 import Title from "../Title";
-import styles from "../../styles/home/Overview.module.css";
+import styles from "styles/home/Overview.module.css";
 
 function Overview() {
   return (

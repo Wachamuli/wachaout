@@ -4,8 +4,8 @@ import {
   faPalette,
 } from "@fortawesome/free-solid-svg-icons";
 
-import ButtonLink from "../ButtonLink";
-import styles from "../../styles/home/Banner.module.css";
+import ButtonLink from "components/ButtonLink";
+import styles from "styles/home/Banner.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Banner() {

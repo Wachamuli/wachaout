@@ -14,7 +14,7 @@ import {
 import { faQuestionCircle } from "@fortawesome/free-regular-svg-icons";
 
 import ActiveLink from "./ActiveLink";
-import styles from "../styles/Navbar.module.css";
+import styles from "styles/Navbar.module.css";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

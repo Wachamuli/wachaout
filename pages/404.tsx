@@ -1,4 +1,4 @@
-import styles from "../styles/404.module.css";
+import styles from "styles/404.module.css";
 
 function Custom404() {
   return (

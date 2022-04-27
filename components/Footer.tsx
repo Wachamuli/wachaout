@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSortUp } from "@fortawesome/free-solid-svg-icons";
 
 import SocialIcons from "./SocialIcons";
-import styles from "../styles/Footer.module.css";
+import styles from "styles/Footer.module.css";
 
 function Footer() {
   function scrollToTop(): void {

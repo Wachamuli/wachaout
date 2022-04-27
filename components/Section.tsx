@@ -1,5 +1,5 @@
 import Title from "./Title";
-import styles from "../styles/Section.module.css";
+import styles from "styles/Section.module.css";
 
 interface Props {
   title: string;

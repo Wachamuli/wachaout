@@ -1,7 +1,7 @@
 import Title from "../Title";
 import GalleryCard from "../GalleryCard";
 
-import styles from "../../styles/home/GallerySelector.module.css";
+import styles from "styles/home/GallerySelector.module.css";
 
 function GallerySelector() {
   return (

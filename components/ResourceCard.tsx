@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
-import styles from "../styles/ResourceCard.module.css";
+import styles from "styles/ResourceCard.module.css";
 
 interface Props {
   title: string;

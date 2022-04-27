@@ -6,7 +6,7 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 
-import styles from "../styles/SocialIcons.module.css";
+import styles from "styles/SocialIcons.module.css";
 
 function SocialIcons({ className }: { className?: string }) {
   return (

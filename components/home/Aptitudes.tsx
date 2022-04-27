@@ -7,7 +7,7 @@ import {
 import Title from "../Title";
 import Aptitude from "../Aptitude";
 
-import styles from "../../styles/home/Aptitudes.module.css";
+import styles from "styles/home/Aptitudes.module.css";
 
 function Aptitudes() {
   return (

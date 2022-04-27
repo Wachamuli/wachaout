@@ -1,4 +1,4 @@
-import styles from "../styles/Resource.module.css";
+import styles from "styles/Resource.module.css";
 
 interface Props {
   name?: string;
