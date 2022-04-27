@@ -1,12 +1,10 @@
 import { useRouter } from "next/router";
-import { ReactNode } from "react";
 
-import style from "../styles/Navbar.module.css";
+import { BaseHtmlAttributes } from "./interfaces/BaseProps";
+import styles from "../styles/Navbar.module.css";
 
-interface Props {
+interface Props extends BaseHtmlAttributes {
   href: string;
-  className?: string;
-  children?: ReactNode;
 }
 
 function ActiveLink({ href, children, className }: Props) {
@@ -22,7 +20,7 @@ function ActiveLink({ href, children, className }: Props) {
 
   return (
     <a
-      className={`${getActiveStyle} ${style.route}`}
+      className={`${getActiveStyle} ${styles.route}`}
       href={href}
       onClick={handleClick}
     >
