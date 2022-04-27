@@ -9,7 +9,7 @@ import "../styles/App.css";
 
 config.autoAddCss = false;
 
-function MyApp({ Component, pageProps}: AppProps) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div id="app">
       <Head>

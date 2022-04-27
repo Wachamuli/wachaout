@@ -82,13 +82,20 @@
 }
 
 #servicesMenu {
+  visibility: hidden;
   position: absolute;
   overflow: hidden;
   top: 4rem;
-  height: 0;
+  padding: 0.5rem;
   background: white;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  color: #f90716;
 }
 
 .menuContainer {
@@ -101,7 +108,7 @@
 .routesMenuContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   padding: 1rem;
   border-radius: 10px;

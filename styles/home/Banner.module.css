@@ -68,3 +68,21 @@
   justify-content: space-between;
   padding-top: 1rem;
 }
+
+#devBtn {
+  font-family: "Anton";
+}
+
+#podBtn {
+  font-family: "Righteous";
+}
+
+#illuBtn {
+  font-family: "Lobster Two";
+  font-weight: bold;
+}
+
+
+.icon {
+  margin-left: 5px;
+}

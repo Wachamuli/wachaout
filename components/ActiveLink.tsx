@@ -1,11 +1,12 @@
 import { useRouter } from "next/router";
+import { ReactNode } from "react";
 
 import style from "../styles/Navbar.module.css";
 
 interface Props {
   href: string;
   className?: string;
-  children?: string | JSX.Element[];
+  children?: ReactNode;
 }
 
 function ActiveLink({ href, children, className }: Props) {

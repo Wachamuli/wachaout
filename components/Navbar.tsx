@@ -1,14 +1,17 @@
 import Link from "next/link";
+// TODO: Use Image component instead of img tag
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAngleDown,
+  faAngleUp,
   faCode,
   faMicrophone,
   faPalette,
 } from "@fortawesome/free-solid-svg-icons";
+import { faQuestionCircle } from "@fortawesome/free-regular-svg-icons";
 
 import ActiveLink from "./ActiveLink";
 import style from "../styles/Navbar.module.css";
@@ -23,30 +26,23 @@ function Navbar() {
     function handleClickOutside(e: MouseEvent): void {
       const isMenuClicked = serviceMenu.current?.contains(e.target as Node);
       const isLabelClicked = servicesLabel.current?.contains(e.target as Node);
-      console.log("you clicked");
 
       if (!isMenuClicked && !isLabelClicked) {
         setIsOpen(false);
       }
     }
 
-    const serviceMenuStyle = serviceMenu.current?.style;
-
     if (isOpen) {
-      serviceMenuStyle!.height = "fit-content";
-      serviceMenuStyle!.padding = "0.5rem";
+      serviceMenu.current!.style.visibility = "visible";
       document.addEventListener("click", handleClickOutside);
     } else {
-      serviceMenuStyle!.height = "0px";
-      serviceMenuStyle!.padding = "0px";
+      serviceMenu.current!.style.visibility = "hidden";
     }
 
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
+    return () => document.removeEventListener("click", handleClickOutside);
   }, [isOpen, serviceMenu, servicesLabel]);
 
-  function toggleServicesMenu() {
+  function toggleServicesMenu(): void {
     setIsOpen((isOpen) => !isOpen);
   }
 
@@ -81,8 +77,11 @@ function Navbar() {
             className={style.activeRoute}
             href={serviceRouter().pathname}
           >
-            <label>{serviceRouter().name.toUpperCase()}</label>
-            <FontAwesomeIcon className={style.icon} icon={faAngleDown} />
+            {serviceRouter().name.toUpperCase()}
+            <FontAwesomeIcon
+              className={style.icon}
+              icon={isOpen ? faAngleUp : faAngleDown}
+            />
           </ActiveLink>
         </li>
 
@@ -101,7 +100,10 @@ function Navbar() {
 
       {/* Every selection in components? */}
       <div id={style.servicesMenu} ref={serviceMenu}>
-        <h1>Services</h1>
+        <div className={style.header}>
+          <h1>Services</h1>
+          <FontAwesomeIcon icon={faQuestionCircle} size="lg" />
+        </div>
         <div className={style.menuContainer}>
           <div id={style.routesMenuLeft} className={style.routesMenuContainer}>
             <div className={style.routeMenu}>

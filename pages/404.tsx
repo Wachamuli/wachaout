@@ -1,6 +1,6 @@
 import style from "../styles/404.module.css";
 
-function error_404() {
+function Custom404() {
   return (
     <section className={`section ${style.section}`}>
       <h1>404</h1>
@@ -13,4 +13,4 @@ function error_404() {
   );
 }
 
-export default error_404;
+export default Custom404;

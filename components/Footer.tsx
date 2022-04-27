@@ -15,7 +15,7 @@ function Footer() {
   return (
     <footer id={style.footer}>
       <div id={style.topFooter}>
-        <div id={style.gotoBtnContainer} onClick={() => scrollToTop()}>
+        <div id={style.gotoBtnContainer} onClick={scrollToTop}>
           <FontAwesomeIcon icon={faSortUp} id={style.gotoBtn} />
         </div>
         <div className={style.logo}>
