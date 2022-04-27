@@ -105,7 +105,10 @@ function Navbar() {
           <FontAwesomeIcon icon={faQuestionCircle} size="lg" />
         </div>
         <div className={styles.menuContainer}>
-          <div id={styles.routesMenuLeft} className={styles.routesMenuContainer}>
+          <div
+            id={styles.routesMenuLeft}
+            className={styles.routesMenuContainer}
+          >
             <div className={styles.routeMenu}>
               <Link href="/services/developer">
                 <a className={styles.routeTitle}>
@@ -141,30 +144,33 @@ function Navbar() {
             </div>
           </div>
 
-          <div id={styles.routesMenuRight} className={styles.routesMenuContainer}>
+          <div
+            id={styles.routesMenuRight}
+            className={styles.routesMenuContainer}
+          >
             <div className={styles.routeMenu}>
-              <div
+              <img
                 className={styles.gallery}
-                style={{ backgroundImage: `url("/placeholders/code.jpg")` }}
-              >
-                <h1 className={styles.galleryName}>CodeMadness</h1>
-              </div>
+                src="/placeholders/code.jpg"
+                alt="Image not found"
+              />
+              <h1 className={styles.galleryName}>CodeMadness</h1>
             </div>
             <div className={styles.routeMenu}>
-              <div
+              <img
                 className={styles.gallery}
-                style={{ backgroundImage: `url("/placeholders/podcast.jpg")` }}
-              >
-                <h1 className={styles.galleryName}>Talking Sh*t</h1>
-              </div>
+                src="/placeholders/podcast.jpg"
+                alt="Image not found"
+              />
+              <h1 className={styles.galleryName}>Talking Sh*t</h1>
             </div>
             <div className={styles.routeMenu}>
-              <div
+              <img
                 className={styles.gallery}
-                style={{ backgroundImage: `url("/placeholders/draw.jpg")` }}
-              >
-                <h1 className={styles.galleryName}>Magnum Opus</h1>
-              </div>
+                src="/placeholders/draw.jpg"
+                alt="Image not found"
+              />
+              <h1 className={styles.galleryName}>Magnum Opus</h1>
             </div>
           </div>
         </div>

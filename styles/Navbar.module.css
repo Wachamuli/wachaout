@@ -120,6 +120,7 @@
 
 .routeMenu {
   padding: 0.5rem;
+  position: relative;
 } 
 
 .routeTitle {
@@ -131,19 +132,16 @@
 }
 
 .gallery {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
   width: 170px;
   height: 100px;
   border-radius: 10px;
-  padding: 1rem;
   filter: brightness(0.7);
-  /* text-align: center; */
 }
 
 .galleryName {
-  position: relative;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1rem;
   color: #ffff;
   font-size: 1.1rem;
 }
