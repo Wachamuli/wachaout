@@ -5,7 +5,7 @@ import styles from "styles/home/GallerySelector.module.css";
 
 function GallerySelector() {
   return (
-    <div className="section" style={{ background: "#f3f3f3" }}>
+    <section className="section">
       <Title text="Check my works!" />
       <div className={styles.galleriesContainer}>
         <GalleryCard
@@ -31,7 +31,7 @@ function GallerySelector() {
           fontFamily="Lobster Two"
         />
       </div>
-    </div>
+    </section>
   );
 }
 

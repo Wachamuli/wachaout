@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowRight } from "@fortawesome/free-solid-svg-icons";
 
+import Button from "components/buttons/Button";
 import styles from "styles/GalleryCard.module.css";
 
 interface Props {
@@ -25,12 +26,12 @@ function GalleryCard({
     <Link href={href}>
       <a>
         <div className={styles.card}>
-          <img className={styles.image} src={image} alt="" />
+          <img className={styles.image} src={image} alt="Image not found" />
           <div className={styles.cardContainer}>
             <div className={styles.content}>
               <div className={styles.statusDate}>
                 <label>
-                  <span className={styles.status}>last update</span>{" "}
+                  <span className={styles.status}>Last update</span>{" "}
                   <span className={styles.date}>19/3/2022</span>
                 </label>
               </div>
@@ -39,10 +40,10 @@ function GalleryCard({
               </h1>
               <p className={styles.paragraph}>{description}</p>
               <div className={styles.btnContainer}>
-                <button className={styles.seeMore}>
+                <Button>
                   See more
-                  <FontAwesomeIcon icon={faCircleArrowRight} />
-                </button>
+                  <FontAwesomeIcon className={styles.icon} icon={faCircleArrowRight} />
+                </Button>
               </div>
             </div>
           </div>

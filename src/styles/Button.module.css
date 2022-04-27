@@ -1,0 +1,16 @@
+.btn {
+  font: 1rem "Fira Sans";
+  background: white;
+  padding: 0.5rem 1rem;
+  border: 3px solid black;
+  border-radius: 10px;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.btn:hover {
+  background: yellow; 
+}
