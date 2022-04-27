@@ -1,34 +1,21 @@
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import { CSSProperties, ReactNode } from "react";
 
 import style from "../styles/ButtonLink.module.css";
 
 interface Props {
-  content: string;
   href: string;
-  icon: IconDefinition;
-  animation?: string;
-  fontFamily?: string;
-  fontWeight?: string;
+  children?: ReactNode;
+  id?: string;
+  className?: string;
+  styles?: CSSProperties;
 }
 
-function ButtonLink({
-  content,
-  href,
-  icon,
-  animation,
-  fontFamily,
-  fontWeight,
-}: Props) {
+function ButtonLink({ href, children, id, className, styles }: Props) {
   return (
     <Link href={href}>
-      <a
-        className={`${animation} ${style.btn}`}
-        style={{ fontFamily, fontWeight }}
-      >
-        {content}
-        <FontAwesomeIcon className={`hvr-icon ${style.icon}`} icon={icon} />
+      <a id={id} className={`${className} ${style.btn}`} style={styles}>
+        {children}
       </a>
     </Link>
   );

@@ -1,7 +1,12 @@
-import { faCode, faMicrophone, faPalette } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCode,
+  faMicrophone,
+  faPalette,
+} from "@fortawesome/free-solid-svg-icons";
 
 import ButtonLink from "../ButtonLink";
 import style from "../../styles/home/Banner.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Banner() {
   return (
@@ -18,27 +23,38 @@ function Banner() {
             </div>
             <div className={style.services}>
               <ButtonLink
-                content="Developer"
+                id={style.devBtn}
+                className="hvr-icon-up"
                 href="/services/developer"
-                icon={faCode}
-                animation="hvr-icon-up"
-                fontFamily="Anton"
-              />
+              >
+                Developer
+                <FontAwesomeIcon
+                  className={`hvr-icon ${style.icon}`}
+                  icon={faCode}
+                />
+              </ButtonLink>
               <ButtonLink
-                content="Podcaster"
+                id={style.podBtn}
+                className="hvr-icon-up"
                 href="/services/podcaster"
-                icon={faMicrophone}
-                animation="hvr-icon-up"
-                fontFamily="Righteous"
-              />
+              >
+                Podcaster
+                <FontAwesomeIcon
+                  className={`hvr-icon ${style.icon}`}
+                  icon={faMicrophone}
+                />
+              </ButtonLink>
               <ButtonLink
-                content="Illustrator"
+                id={style.illuBtn}
+                className="hvr-icon-up"
                 href="/services/illustrator"
-                icon={faPalette}
-                animation="hvr-icon-up"
-                fontFamily="Lobster Two"
-                fontWeight="bold"
-              />
+              >
+                Illustrator
+                <FontAwesomeIcon
+                  className={`hvr-icon ${style.icon}`}
+                  icon={faPalette}
+                />
+              </ButtonLink>
             </div>
           </div>
 
