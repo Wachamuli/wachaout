@@ -1,9 +1,9 @@
 import { faDisplay, faServer } from "@fortawesome/free-solid-svg-icons";
 
-import Title from "../../Title";
-import Resource from "../../Resource";
-import ResourceCard from "../../ResourceCard";
-import styles from "../../../styles/Resources.module.css";
+import Title from "../../../miscellaneous/Title";
+import Resource from "../../../resources/Resource";
+import ResourceCard from "../../../resources/ResourceCard";
+import styles from "styles/Resources.module.css";
 
 function Resources() {
   return (

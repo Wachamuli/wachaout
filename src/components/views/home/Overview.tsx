@@ -1,4 +1,4 @@
-import Title from "../Title";
+import Title from "components/miscellaneous/Title";
 import styles from "styles/home/Overview.module.css";
 
 function Overview() {

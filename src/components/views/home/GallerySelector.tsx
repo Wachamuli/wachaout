@@ -1,5 +1,5 @@
-import Title from "../Title";
-import GalleryCard from "../GalleryCard";
+import Title from "components/miscellaneous/Title";
+import GalleryCard from "components/miscellaneous/GalleryCard";
 
 import styles from "styles/home/GallerySelector.module.css";
 

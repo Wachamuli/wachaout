@@ -1,8 +1,8 @@
-import Banner from "components/home/Banner";
-import Overview from "components/home/Overview";
-import Section from "components/Section";
-import Aptitudes from "components/home/Aptitudes";
-import GallerySelector from "components/home/GallerySelector";
+import Banner from "components/views/home/Banner";
+import Overview from "components/views/home/Overview";
+import Section from "components/miscellaneous/Section";
+import Aptitudes from "components/views/home/Aptitudes";
+import GallerySelector from "components/views/home/GallerySelector";
 
 export default function Home() {
   return (

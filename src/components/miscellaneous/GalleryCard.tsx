@@ -1,9 +1,8 @@
-import { StaticImageData } from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-import styles from "../styles/GalleryCard.module.css";
+import styles from "styles/GalleryCard.module.css";
 
 interface Props {
   href: string;
@@ -25,10 +24,8 @@ function GalleryCard({
   return (
     <Link href={href}>
       <a>
-        <div
-          className={styles.card}
-          style={{ backgroundImage: `url(${image})` }}
-        >
+        <div className={styles.card}>
+          <img className={styles.image} src={image} alt="" />
           <div className={styles.cardContainer}>
             <div className={styles.content}>
               <div className={styles.statusDate}>

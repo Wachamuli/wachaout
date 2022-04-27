@@ -4,8 +4,8 @@ import {
   faFire,
 } from "@fortawesome/free-solid-svg-icons";
 
-import Title from "../Title";
-import Aptitude from "../Aptitude";
+import Title from "../../miscellaneous/Title";
+import Aptitude from "../../miscellaneous/Aptitude";
 
 import styles from "styles/home/Aptitudes.module.css";
 

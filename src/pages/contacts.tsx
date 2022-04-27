@@ -1,5 +1,5 @@
-import SocialIcons from "components/SocialIcons";
-import Title from "components/Title";
+import SocialIcons from "components/miscellaneous/SocialIcons";
+import Title from "components/miscellaneous/Title";
 import styles from "styles/Contacts.module.css";
 
 function Contacts() {

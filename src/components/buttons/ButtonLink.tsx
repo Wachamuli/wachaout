@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { BaseHtmlAttributes } from "./interfaces/BaseProps";
+import { BaseHtmlAttributes } from "../interfaces/BaseProps";
 import styles from "styles/ButtonLink.module.css";
 
 interface Props extends BaseHtmlAttributes {

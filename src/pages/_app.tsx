@@ -3,8 +3,8 @@ import { AppProps } from "next/app";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
-import Navbar from "components/Navbar";
-import Footer from "components/Footer";
+import Navbar from "components/layout/Navbar";
+import Footer from "components/layout/Footer";
 import "styles/App.css";
 
 config.autoAddCss = false;

@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-import { BaseHtmlAttributes } from "./interfaces/BaseProps";
+import { BaseHtmlAttributes } from "../interfaces/BaseProps";
 import styles from "styles/Navbar.module.css";
 
 interface Props extends BaseHtmlAttributes {

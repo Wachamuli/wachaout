@@ -13,7 +13,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faQuestionCircle } from "@fortawesome/free-regular-svg-icons";
 
-import ActiveLink from "./ActiveLink";
+import ActiveLink from "../miscellaneous/ActiveLink";
 import styles from "styles/Navbar.module.css";
 
 function Navbar() {

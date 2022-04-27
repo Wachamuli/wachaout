@@ -1,4 +1,4 @@
-import Resources from "components/services/developer/Resources";
+import Resources from "components/views/services/developer/Resources";
 
 function Developer() {
   return <Resources />;
