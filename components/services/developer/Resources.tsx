@@ -3,13 +3,13 @@ import { faDisplay, faServer } from "@fortawesome/free-solid-svg-icons";
 import Title from "../../Title";
 import Resource from "../../Resource";
 import ResourceCard from "../../ResourceCard";
-import style from "../../../styles/Resources.module.css";
+import styles from "../../../styles/Resources.module.css";
 
 function Resources() {
   return (
     <section className="section">
       <Title text="Resources" />
-      <div className={style.sectionContainer}>
+      <div className={styles.sectionContainer}>
         <ResourceCard
           title="Front-end"
           description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur

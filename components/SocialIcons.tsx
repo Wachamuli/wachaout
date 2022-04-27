@@ -6,25 +6,22 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 
-import style from "../styles/SocialIcons.module.css";
+import styles from "../styles/SocialIcons.module.css";
 
-function SocialIcons({ color }: { color?: string }) {
-  const colorStyle = { color };
-
+function SocialIcons({ className }: { className?: string }) {
   return (
-    // Too much boilerplate with colorStyle, I need a better way for style props
-    <ul>
-      <li className={style.socialIconContainer} style={colorStyle}>
-        <FontAwesomeIcon className={style.socialIcon} icon={faYoutube} />
+    <ul className={className}>
+      <li className={styles.socialIconContainer}>
+        <FontAwesomeIcon className={styles.socialIcon} icon={faYoutube} />
       </li>
-      <li className={style.socialIconContainer} style={colorStyle}>
-        <FontAwesomeIcon className={style.socialIcon} icon={faGithub} />
+      <li className={styles.socialIconContainer}>
+        <FontAwesomeIcon className={styles.socialIcon} icon={faGithub} />
       </li>
-      <li className={style.socialIconContainer} style={colorStyle}>
-        <FontAwesomeIcon className={style.socialIcon} icon={faTwitter} />
+      <li className={styles.socialIconContainer}>
+        <FontAwesomeIcon className={styles.socialIcon} icon={faTwitter} />
       </li>
-      <li className={style.socialIconContainer} style={colorStyle}>
-        <FontAwesomeIcon className={style.socialIcon} icon={faInstagram} />
+      <li className={styles.socialIconContainer}>
+        <FontAwesomeIcon className={styles.socialIcon} icon={faInstagram} />
       </li>
     </ul>
   );

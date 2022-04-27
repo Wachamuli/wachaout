@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSortUp } from "@fortawesome/free-solid-svg-icons";
 
 import SocialIcons from "./SocialIcons";
-import style from "../styles/Footer.module.css";
+import styles from "../styles/Footer.module.css";
 
 function Footer() {
   function scrollToTop(): void {
@@ -13,16 +13,16 @@ function Footer() {
   }
 
   return (
-    <footer id={style.footer}>
-      <div id={style.topFooter}>
-        <div id={style.gotoBtnContainer} onClick={scrollToTop}>
-          <FontAwesomeIcon icon={faSortUp} id={style.gotoBtn} />
+    <footer id={styles.footer}>
+      <div id={styles.topFooter}>
+        <div id={styles.gotoBtnContainer} onClick={scrollToTop}>
+          <FontAwesomeIcon icon={faSortUp} id={styles.gotoBtn} />
         </div>
-        <div className={style.logo}>
+        <div className={styles.logo}>
           <div>LOGO</div>
         </div>
-        <div className={style.summaryContainer}>
-          <p className={style.summary}>
+        <div className={styles.summaryContainer}>
+          <p className={styles.summary}>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores
             quam eveniet voluptatem sunt, voluptatibus eos nihil iure obcaecati
             asperiores cupiditate sequi tempora adipisci, quasi distinctio
@@ -31,12 +31,12 @@ function Footer() {
           </p>
         </div>
 
-        <div className={style.socialIconsContainer}>
-          <SocialIcons color="rgb(236, 236, 236)"/>
+        <div className={styles.socialIconsContainer}>
+          <SocialIcons className={styles.socialIcons}/>
         </div>
 
         <div>
-          <h5 className={style.host}>Hosted on Heroku</h5>
+          <h5 className={styles.host}>Hosted on Heroku</h5>
           <h5>Legal · Privacy · Cookies</h5>
         </div>
       </div>

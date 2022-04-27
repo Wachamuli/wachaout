@@ -1,14 +1,13 @@
 import Title from "../Title";
 import GalleryCard from "../GalleryCard";
 
-import style from "../../styles/home/GallerySelector.module.css";
-import code from "../../public/placeholders/code.jpg";
+import styles from "../../styles/home/GallerySelector.module.css";
 
 function GallerySelector() {
   return (
     <div className="section" style={{ background: "#f3f3f3" }}>
       <Title text="Check my works!" />
-      <div className={style.galleriesContainer}>
+      <div className={styles.galleriesContainer}>
         <GalleryCard
           href="/developer"
           image="/placeholders/code.jpg"

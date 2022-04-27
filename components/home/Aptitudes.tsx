@@ -7,13 +7,13 @@ import {
 import Title from "../Title";
 import Aptitude from "../Aptitude";
 
-import style from "../../styles/home/Aptitudes.module.css";
+import styles from "../../styles/home/Aptitudes.module.css";
 
 function Aptitudes() {
   return (
     <section id="aptitudes" className="section">
       <Title text="Why me?" />
-      <div id={style.aptitudesContainer}>
+      <div id={styles.aptitudesContainer}>
         <Aptitude
           icon={faLightbulb}
           subtitle="Skilled"

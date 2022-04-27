@@ -1,4 +1,4 @@
-import style from "../styles/Resource.module.css";
+import styles from "../styles/Resource.module.css";
 
 interface Props {
   name?: string;
@@ -10,10 +10,10 @@ interface Props {
 
 function Resource({ name, tagline, image, height, width }: Props) {
   return (
-    <div className={style.resource}>
-      <div className={style.resourceContainer}>
+    <div className={styles.resource}>
+      <div className={styles.resourceContainer}>
         <img
-          className={style.resourceImg}
+          className={styles.resourceImg}
           src={image}
           style={{ height, width }}
           alt="Image not found"

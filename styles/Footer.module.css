@@ -42,6 +42,10 @@
   margin: 1rem;
 }
 
+.socialIcons {
+  color: white; 
+}
+
 .host {
   color: rgb(236, 236, 236);
 }

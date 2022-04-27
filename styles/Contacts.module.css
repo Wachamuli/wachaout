@@ -30,7 +30,7 @@
   padding-left: 8px;
   padding-bottom: 1rem;
   padding-top: 1rem;
-  border-style: solid;
+  border-styles: solid;
   border-radius: 10px;
 }
 
@@ -40,7 +40,7 @@
   padding-top: 1rem;
   padding-left: 8px;
   font-family: "Fira Sans";
-  border-style: solid;
+  border-styles: solid;
   border-width: 2px;
   border-radius: 10px;
 }
@@ -49,7 +49,7 @@
   cursor: pointer;
   line-height: normal;
   background-color: black;
-  border-style: solid;
+  border-styles: solid;
   border-radius: 10px;
   border: none;
   color: white;
@@ -72,6 +72,10 @@
 .socialIconsContainer {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.socialIcons {
+  color: black;
 }
 
 .address {

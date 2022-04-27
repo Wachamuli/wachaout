@@ -14,7 +14,7 @@ import {
 import { faQuestionCircle } from "@fortawesome/free-regular-svg-icons";
 
 import ActiveLink from "./ActiveLink";
-import style from "../styles/Navbar.module.css";
+import styles from "../styles/Navbar.module.css";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,80 +60,80 @@ function Navbar() {
   }
 
   return (
-    <nav id={style.navbar}>
-      <ul id={style.logoContainer}>
-        <li className={style.logo}>LOGO</li>
+    <nav id={styles.navbar}>
+      <ul id={styles.logoContainer}>
+        <li className={styles.logo}>LOGO</li>
       </ul>
 
-      <ul id={style.routesContainer}>
-        <li className={style.routeContainer}>
-          <ActiveLink className={style.activeRoute} href="/">
+      <ul id={styles.routesContainer}>
+        <li className={styles.routeContainer}>
+          <ActiveLink className={styles.activeRoute} href="/">
             HOME
           </ActiveLink>
         </li>
 
         <li onClick={toggleServicesMenu} ref={servicesLabel}>
           <ActiveLink
-            className={style.activeRoute}
+            className={styles.activeRoute}
             href={serviceRouter().pathname}
           >
             {serviceRouter().name.toUpperCase()}
             <FontAwesomeIcon
-              className={style.icon}
+              className={styles.icon}
               icon={isOpen ? faAngleUp : faAngleDown}
             />
           </ActiveLink>
         </li>
 
-        <li className={style.routeContainer}>
-          <ActiveLink className={style.activeRoute} href="/contacts">
+        <li className={styles.routeContainer}>
+          <ActiveLink className={styles.activeRoute} href="/contacts">
             CONTACTS
           </ActiveLink>
         </li>
 
-        <li className={style.support}>
+        <li className={styles.support}>
           <Link href="/support">
-            <a className={style.supportBtn}>SUPPORT</a>
+            <a className={styles.supportBtn}>SUPPORT</a>
           </Link>
         </li>
       </ul>
 
       {/* Every selection in components? */}
-      <div id={style.servicesMenu} ref={serviceMenu}>
-        <div className={style.header}>
+      <div id={styles.servicesMenu} ref={serviceMenu}>
+        <div className={styles.header}>
           <h1>Services</h1>
           <FontAwesomeIcon icon={faQuestionCircle} size="lg" />
         </div>
-        <div className={style.menuContainer}>
-          <div id={style.routesMenuLeft} className={style.routesMenuContainer}>
-            <div className={style.routeMenu}>
+        <div className={styles.menuContainer}>
+          <div id={styles.routesMenuLeft} className={styles.routesMenuContainer}>
+            <div className={styles.routeMenu}>
               <Link href="/services/developer">
-                <a className={style.routeTitle}>
+                <a className={styles.routeTitle}>
                   Developer
                   <FontAwesomeIcon icon={faCode} />
-                  <p className={style.description}>
+                  <p className={styles.description}>
                     Lorem ipsum dolor sit amet
                   </p>
                 </a>
               </Link>
             </div>
-            <div className={style.routeMenu}>
+            <div className={styles.routeMenu}>
               <Link href="/services/podcaster">
-                <a className={style.routeTitle}>
+                <a className={styles.routeTitle}>
                   Podcaster
                   <FontAwesomeIcon icon={faMicrophone} />
-                  <p className={style.description}>
+                  <p className={styles.description}>
                     Lorem ipsum dolor sit amet
                   </p>
                 </a>
               </Link>
             </div>
-            <div className={style.routeMenu}>
+            <div className={styles.routeMenu}>
               <Link href="/services/illustrator">
-                <a className={style.routeTitle}>
+                <a className={styles.routeTitle}>
                   Illustrator
                   <FontAwesomeIcon icon={faPalette} />
-                  <p className={style.description}>
+                  <p className={styles.description}>
                     Lorem ipsum dolor sit amet
                   </p>
                 </a>
@@ -141,29 +141,29 @@ function Navbar() {
             </div>
           </div>
 
-          <div id={style.routesMenuRight} className={style.routesMenuContainer}>
-            <div className={style.routeMenu}>
+          <div id={styles.routesMenuRight} className={styles.routesMenuContainer}>
+            <div className={styles.routeMenu}>
               <div
-                className={style.gallery}
+                className={styles.gallery}
                 style={{ backgroundImage: `url("/placeholders/code.jpg")` }}
               >
-                <h1 className={style.galleryName}>CodeMadness</h1>
+                <h1 className={styles.galleryName}>CodeMadness</h1>
               </div>
             </div>
-            <div className={style.routeMenu}>
+            <div className={styles.routeMenu}>
               <div
-                className={style.gallery}
+                className={styles.gallery}
                 style={{ backgroundImage: `url("/placeholders/podcast.jpg")` }}
               >
-                <h1 className={style.galleryName}>Talking Sh*t</h1>
+                <h1 className={styles.galleryName}>Talking Sh*t</h1>
               </div>
             </div>
-            <div className={style.routeMenu}>
+            <div className={styles.routeMenu}>
               <div
-                className={style.gallery}
+                className={styles.gallery}
                 style={{ backgroundImage: `url("/placeholders/draw.jpg")` }}
               >
-                <h1 className={style.galleryName}>Magnum Opus</h1>
+                <h1 className={styles.galleryName}>Magnum Opus</h1>
               </div>
             </div>
           </div>

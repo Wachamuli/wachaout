@@ -1,8 +1,8 @@
-import style from "../styles/404.module.css";
+import styles from "../styles/404.module.css";
 
 function Custom404() {
   return (
-    <section className={`section ${style.section}`}>
+    <section className={`section ${styles.section}`}>
       <h1>404</h1>
       <h2>Page Not Found</h2>
       <h3>

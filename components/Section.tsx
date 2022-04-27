@@ -1,5 +1,5 @@
 import Title from "./Title";
-import style from "../styles/Section.module.css";
+import styles from "../styles/Section.module.css";
 
 interface Props {
   title: string;
@@ -10,21 +10,21 @@ interface Props {
 
 function Section({ title, subtitle, paragraph, picture }: Props) {
   return (
-  <section id={style.section} className="section">
-    <div className={style.sectionContainer}>
-      <div className={style.sectionLeftSide}>
+  <section id={styles.section} className="section">
+    <div className={styles.sectionContainer}>
+      <div className={styles.sectionLeftSide}>
         <Title text={title} />
-        <div className={style.subtitleContainer}>
-          <h1 className={style.subtitle}>
+        <div className={styles.subtitleContainer}>
+          <h1 className={styles.subtitle}>
             { subtitle }
           </h1>
         </div>
-        <div className={style.paragraphContainer}>
-          <p className={style.paragraph}>{ paragraph }</p>
+        <div className={styles.paragraphContainer}>
+          <p className={styles.paragraph}>{ paragraph }</p>
         </div>
       </div>
-      <div className={style.sectionRightSide}>
-        <img className={style.image} src={picture} alt="No image" />
+      <div className={styles.sectionRightSide}>
+        <img className={styles.image} src={picture} alt="No image" />
       </div>
     </div>
   </section>
