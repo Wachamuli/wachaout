@@ -11,6 +11,10 @@
   box-shadow: -3px 3px 0px 3px black;
   text-align: center;
   transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
 }
 
 .btn:hover,

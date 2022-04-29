@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import { ReactNode } from "react";
 
 import styles from "styles/ResourceCard.module.css";
 
@@ -7,7 +8,7 @@ interface Props {
   title: string;
   description: string;
   icon: IconDefinition;
-  children?: JSX.Element[];
+  children?: ReactNode;
 }
 
 function ResourceCard({ title, description, icon, children }: Props) {
