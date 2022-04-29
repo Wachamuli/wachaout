@@ -62,7 +62,7 @@ function Navbar() {
   return (
     <nav id={styles.navbar}>
       <ul id={styles.logoContainer}>
-        <li className={styles.logo}>LOGO</li>
+        <li className={styles.logo}>WachaOut!</li>
       </ul>
 
       <ul id={styles.routesContainer}>

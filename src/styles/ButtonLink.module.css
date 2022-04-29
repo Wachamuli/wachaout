@@ -1,7 +1,8 @@
 .btn {
   cursor: pointer;
   background: white;
-  color: #c9050b;
+  /* color: #c9050b; */
+  color: #f90716;
   padding: 0.5rem;
   border: 3px solid black;
   width: 30%;

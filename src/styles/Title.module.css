@@ -1,5 +1,5 @@
 .title {
-  font: bold 2.5rem "Fugaz One";
+  font: bold 2.5rem "Fira Sans";
   position: relative;
   color: black;
   text-align: left;
@@ -10,7 +10,7 @@
   content: "";
   display: block;
   position: absolute;
-  border-bottom: 10px solid #c9050b;
+  border-bottom: 10px solid #f90716;
   border-radius: 10px;
   width: 50px;
   bottom: 0;

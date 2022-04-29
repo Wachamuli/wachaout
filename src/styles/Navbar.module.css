@@ -3,22 +3,22 @@
   top: 0;
   display: flex;
   justify-content: flex-end;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  padding-right: 7rem;
-  padding-left: 7rem;
-  font-weight: 700;
+  padding: 0.5rem 7rem 0.5rem 7rem;
+  font-weight: bold;
   background: #f90716;
   z-index: 99;
 }
 
 .logo {
   color: #ffff;
+  font-family: "Fugaz One", cursive;
+  font-size: 1.5rem;
+  text-shadow: -3px 3px rgb(0, 0, 0, 0.7);
+  letter-spacing: 1px;
 }
 
 #logoContainer {
   margin-right: auto;
-  padding: 1rem;
   align-self: center;
 }
 
@@ -53,12 +53,11 @@
 }
 
 .activeRoute::after {
-  content: "";
   display: block;
-  width: 100%;
   position: absolute;
+  content: "";
+  width: 100%;
   bottom: 0;
-  border: 1px solid white;
   border-radius: 10px;
   border-bottom: 4px solid white;
 }
