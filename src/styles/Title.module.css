@@ -1,17 +1,17 @@
 .title {
-  font: bold 2.5rem "Fira Sans";
+  font: bold 2rem "Fira Sans";
   position: relative;
   color: black;
   text-align: left;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .title:after {
   content: "";
   display: block;
   position: absolute;
-  border-bottom: 10px solid #f90716;
+  border-bottom: 8px solid #f90716;
   border-radius: 10px;
   width: 50px;
-  bottom: 0;
+  bottom: 1;
 }

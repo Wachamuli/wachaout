@@ -40,9 +40,9 @@ function GalleryCard({
               </h1>
               <p className={styles.paragraph}>{description}</p>
               <div className={styles.btnContainer}>
-                <Button>
+                <Button className="hvr-icon-forward">
                   See more
-                  <FontAwesomeIcon className={styles.icon} icon={faCircleArrowRight} />
+                  <FontAwesomeIcon className={`hvr-icon ${styles.icon}`} icon={faCircleArrowRight} />
                 </Button>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import {
+  faArrowRightLong,
   faCode,
   faMicrophone,
   faPalette,
@@ -16,41 +17,34 @@ function Banner() {
         <div className={styles.bannerTopContainer}>
           <div id={styles.bannerLeftSide}>
             <div id={styles.bannerTitleContainer}>
-              {/* <h1 id={styles.bannerTitle}>WachaOut!</h1> */}
-              <h1>What are you looking for?</h1>
-              <h4 id={styles.bannerSubtext}>
-                Web pages, Game Development, Nice
-                Drawings, a Good Interview...
-              </h4>
+              <h2>What are you looking for?</h2>
+              <h1 id={styles.bannerSubtext}>
+                Web pages, Game Development, Nice Drawings, a Good Interview...
+              </h1>
+              <p className={`hvr-icon-forward ${styles.moreBtn}`}>
+                More
+                <FontAwesomeIcon
+                  icon={faArrowRightLong}
+                  className={`hvr-icon ${styles.icon}`}
+                />
+              </p>
             </div>
             <div className={styles.services}>
-              <Button
-                id={styles.devBtn}
-                className="hvr-icon-up"
-                // href="/services/developer"
-              >
+              <Button id={styles.devBtn} className="hvr-icon-up">
                 Services
                 <FontAwesomeIcon
                   className={`hvr-icon ${styles.icon}`}
                   icon={faCode}
                 />
               </Button>
-              <Button
-                id={styles.podBtn}
-                className="hvr-icon-up"
-                // href="/services/podcaster"
-              >
+              <Button id={styles.podBtn} className="hvr-icon-up">
                 Podcaster
                 <FontAwesomeIcon
                   className={`hvr-icon ${styles.icon}`}
                   icon={faMicrophone}
                 />
               </Button>
-              <Button
-                id={styles.illuBtn}
-                className="hvr-icon-up"
-                // href="/services/illustrator"
-              >
+              <Button id={styles.illuBtn} className="hvr-icon-up">
                 Illustrator
                 <FontAwesomeIcon
                   className={`hvr-icon ${styles.icon}`}
@@ -61,12 +55,12 @@ function Banner() {
           </div>
 
           <div id={styles.bannerRightSide}>
-            {/* <div className={styles.entireLogo}> */}
+            <div className={styles.entireLogo}>
               <div className={styles.pattern}></div>
               <div className={styles.logo}>
                 <img id={styles.logoImage} alt="" />
               </div>
-            {/* </div> */}
+            </div>
           </div>
         </div>
       </div>

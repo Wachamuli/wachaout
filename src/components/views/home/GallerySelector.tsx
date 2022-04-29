@@ -10,7 +10,7 @@ function GallerySelector() {
       <div className={styles.galleriesContainer}>
         <GalleryCard
           href="/developer"
-          image="/placeholders/code.jpg"
+          image="/placeholders/gamedev.jpg"
           title="CodeMadness"
           description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, voluptas?"
           fontFamily="Anton"
@@ -18,14 +18,14 @@ function GallerySelector() {
         />
         <GalleryCard
           href="/podcaster"
-          image="/placeholders/podcast.jpg"
+          image="/placeholders/podcastoffice.png"
           title="Talking Sh*t"
           description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, voluptas?"
           fontFamily="Righteous"
         />
         <GalleryCard
           href="/illustrator"
-          image="/placeholders/draw.jpg"
+          image="/placeholders/nicedraw.jpg"
           title="Magnum Opus"
           description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, voluptas?"
           fontFamily="Lobster Two"
