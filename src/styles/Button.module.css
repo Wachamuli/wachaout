@@ -13,6 +13,8 @@
   min-width: 9.5rem;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus,
+.btn:active {
   background: yellow; 
 }

@@ -1,13 +1,13 @@
 import {
   faLightbulb,
-  faCalendarCheck,
-  faFire,
-} from "@fortawesome/free-solid-svg-icons";
+  faHandshake,
+  faHeart,
+} from "@fortawesome/free-regular-svg-icons";
 
 import Title from "../../miscellaneous/Title";
 import Aptitude from "../../miscellaneous/Aptitude";
-
 import styles from "styles/home/Aptitudes.module.css";
+
 
 function Aptitudes() {
   return (
@@ -22,14 +22,14 @@ function Aptitudes() {
             cupiditate."
         />
         <Aptitude
-          icon={faCalendarCheck}
+          icon={faHandshake}
           subtitle="Responsible"
           text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque
             optio sapiente earum aperiam voluptas sed quo sit? Ex, expedita
             cupiditate."
         />
         <Aptitude
-          icon={faFire}
+          icon={faHeart}
           subtitle="Passionate"
           text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque
             optio sapiente earum aperiam voluptas sed quo sit? Ex, expedita

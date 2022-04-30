@@ -5,8 +5,8 @@ import styles from "styles/home/GallerySelector.module.css";
 
 function GallerySelector() {
   return (
-    <section className="section">
-      <Title text="Check my works!" />
+    <section className={`section ${styles.section}`}>
+      <Title text="Check my works out!" />
       <div className={styles.galleriesContainer}>
         <GalleryCard
           href="/developer"

@@ -19,7 +19,7 @@ function Footer() {
           <FontAwesomeIcon icon={faSortUp} id={styles.gotoBtn} />
         </div>
         <div className={styles.logo}>
-          <div>LOGO</div>
+          <div>WachaOut!</div>
         </div>
         <div className={styles.summaryContainer}>
           <p className={styles.summary}>

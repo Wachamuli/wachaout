@@ -18,6 +18,7 @@
 #app {
   font-family: "Fira Sans", Helvetica, Arial, sans-serif;
   font-weight: 500;
+  font-size: 1.1rem;
   color: #7e7c7c;
   background-color: #ffff;
   position: relative;
@@ -28,8 +29,7 @@
 }
 
 #main {
-  padding-bottom: 16.6rem;
-  font-size: 1.1rem;
+  padding-bottom: 18rem;
 }
 
 ::-webkit-scrollbar {

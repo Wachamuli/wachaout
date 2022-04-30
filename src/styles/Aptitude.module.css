@@ -4,17 +4,16 @@
   padding-right: 0.5rem;
 }
 
+.iconContainer {
+  color: #f90716;
+}
+
 .subtitleContainer {
-  margin-bottom: 10px;
+  margin: 1rem 0 1rem 0;
 }
 
 .subtitle {
   font-family: "Fira Sans";
   font-size: 1.5rem;
   color: black;
-}
-
-.iconContainer {
-  margin-bottom: 0.5rem;
-  color: #c9050b;
 }

@@ -9,6 +9,7 @@ import ButtonLink from "components/buttons/ButtonLink";
 import styles from "styles/home/Banner.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "components/buttons/Button";
+import Link from "next/link";
 
 function Banner() {
   return (
@@ -21,17 +22,19 @@ function Banner() {
               <h1 id={styles.bannerSubtext}>
                 Web pages, Game Development, Nice Drawings, a Good Interview...
               </h1>
-              <p className={`hvr-icon-forward ${styles.moreBtn}`}>
-                More
-                <FontAwesomeIcon
-                  icon={faArrowRightLong}
-                  className={`hvr-icon ${styles.icon}`}
-                />
-              </p>
+              <Link href="/contacts">
+                <a className={`hvr-icon-forward ${styles.moreBtn}`}>
+                  More
+                  <FontAwesomeIcon
+                    icon={faArrowRightLong}
+                    className={`hvr-icon ${styles.icon}`}
+                  />
+                </a>
+              </Link>
             </div>
             <div className={styles.services}>
               <Button id={styles.devBtn} className="hvr-icon-up">
-                Services
+                Developer
                 <FontAwesomeIcon
                   className={`hvr-icon ${styles.icon}`}
                   icon={faCode}
