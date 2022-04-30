@@ -1,14 +1,20 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+
 import styles from "styles/404.module.css";
 
 function Custom404() {
   return (
     <section className={`section ${styles.section}`}>
-      <h1>404</h1>
-      <h2>Page Not Found</h2>
-      <h3>
+      <FontAwesomeIcon id={styles.watermark} icon={faMagnifyingGlass} size="10x" />
+      <div className={styles.top}>
+        <h1 className={styles.errorNumber}>404</h1>
+        <h2 className={styles.errorName}>Page Not Found</h2>
+      </div>
+      <p className={styles.paragraph}>
         Oh no! This page is not available, but look at the bright side, you've
         found a 404 error.
-      </h3>
+      </p>
     </section>
   );
 }
