@@ -1,11 +1,10 @@
 import {
   faArrowRightLong,
   faCode,
-  faMicrophone,
+  faMicrophoneLines,
   faPalette,
 } from "@fortawesome/free-solid-svg-icons";
 
-import ButtonLink from "components/buttons/ButtonLink";
 import styles from "styles/home/Banner.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "components/buttons/Button";
@@ -44,7 +43,7 @@ function Banner() {
                 Podcaster
                 <FontAwesomeIcon
                   className={`hvr-icon ${styles.icon}`}
-                  icon={faMicrophone}
+                  icon={faMicrophoneLines}
                 />
               </Button>
               <Button id={styles.illuBtn} className="hvr-icon-up">
