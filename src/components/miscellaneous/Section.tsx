@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import Title from "./Title";
 import styles from "styles/Section.module.css";
 
@@ -12,7 +14,13 @@ function Section({ title, subtitle, paragraph, picture }: Props) {
   return (
   <section id={styles.section} className="section">
     <div className={styles.sectionContainer}>
+      <div className={styles.sectionRightSide}>
+
+        <img className={styles.image} src={picture} alt="No image" />
+
+      </div>
       <div className={styles.sectionLeftSide}>
+
         <Title text={title} />
         <div className={styles.subtitleContainer}>
           <h1 className={styles.subtitle}>
@@ -22,9 +30,7 @@ function Section({ title, subtitle, paragraph, picture }: Props) {
         <div className={styles.paragraphContainer}>
           <p className={styles.paragraph}>{ paragraph }</p>
         </div>
-      </div>
-      <div className={styles.sectionRightSide}>
-        <img className={styles.image} src={picture} alt="No image" />
+
       </div>
     </div>
   </section>
