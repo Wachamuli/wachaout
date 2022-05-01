@@ -55,11 +55,10 @@ function Contacts() {
             icon={faEnvelope}
             size="10x"
           />
-          <h1 className={styles.subtitle}>Find me</h1>
-          <p>
-            You can do it through my social networks or by writing an email to
+          <h2 className={styles.header}>
+            You can also do it through my social networks or by writing an email to
             the corresponding address
-          </p>
+          </h2>
 
           <div className={styles.socialIconsContainer}>
             <SocialIcons className={styles.socialIcons} />
@@ -76,8 +75,8 @@ function Contacts() {
             <p>hello@wachaout.com</p>
           </div>
           <div className={styles.emailContainer}>
-            <h4>Join Us</h4>
-            <p>hiring@wachaout.com</p>
+            <h4>Other related work</h4>
+            <p>interesting@wachaout.com</p>
           </div>
           <div className={styles.emailContainer}>
             <h4>Fizz-Buzz</h4>
