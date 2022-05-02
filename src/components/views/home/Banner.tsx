@@ -60,7 +60,7 @@ function Banner() {
             <div className={styles.entireLogo}>
               <div className={styles.pattern}></div>
               <div className={styles.logo}>
-                <img id={styles.logoImage} alt="" />
+                {/* <Image id={styles.logoImage} alt="" /> */}
               </div>
             </div>
           </div>

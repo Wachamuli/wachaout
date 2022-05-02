@@ -11,16 +11,16 @@ import styles from "styles/SocialIcons.module.css";
 function SocialIcons({ className }: { className?: string }) {
   return (
     <ul className={className}>
-      <li className={styles.socialIconContainer}>
+      <li title="Youtube" className={styles.socialIconContainer}>
         <FontAwesomeIcon className={styles.socialIcon} icon={faYoutube} />
       </li>
-      <li className={styles.socialIconContainer}>
+      <li title="Github" className={styles.socialIconContainer}>
         <FontAwesomeIcon className={styles.socialIcon} icon={faGithub} />
       </li>
-      <li className={styles.socialIconContainer}>
+      <li title="Twitter" className={styles.socialIconContainer}>
         <FontAwesomeIcon className={styles.socialIcon} icon={faTwitter} />
       </li>
-      <li className={styles.socialIconContainer}>
+      <li title="Instagram" className={styles.socialIconContainer}>
         <FontAwesomeIcon className={styles.socialIcon} icon={faInstagram} />
       </li>
     </ul>

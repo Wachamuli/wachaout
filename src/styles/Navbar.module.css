@@ -5,15 +5,15 @@
   justify-content: flex-end;
   padding: 0.5rem 7rem 0.5rem 7rem;
   font-weight: bold;
-  background: #f90716;
+  background: white;
+  border-bottom: 3px solid #e2e1e1;
   z-index: 99;
 }
 
 .logo {
-  color: #ffff;
+  color: #f90716;
   font-family: "Fugaz One", cursive;
   font-size: 1.5rem;
-  text-shadow: -3px 3px rgb(0, 0, 0, 0.7);
 }
 
 #logoContainer {
@@ -36,7 +36,7 @@
 }
 
 .route {
-  color: #ffff;
+  color: black;
   padding: 0.5rem;
   align-self: center;
 }
@@ -44,7 +44,7 @@
 .route:hover:not(.activeRoute),
 .route:focus:not(.activeRoute),
 .route:active:not(.activeRoute) {
-  color: rgb(221, 219, 219);
+  color: #7e7c7c;
 }
 
 .activeRoute {
@@ -58,7 +58,7 @@
   width: 100%;
   bottom: 0;
   border-radius: 10px;
-  border-bottom: 4px solid white;
+  border-bottom: 4px solid #f90716;
 }
 
 .icon {
@@ -70,6 +70,7 @@
   background: white;
   padding: 0.5rem;
   background: rgb(255, 241, 42);
+  border: 3px solid black;
   padding-right: 1rem;
   padding-left: 1rem;
 }
@@ -90,11 +91,6 @@
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  color: #f90716;
-}
 
 .menuContainer {
   display: grid;
@@ -112,6 +108,39 @@
   border-radius: 10px;
 }
 
+#routesMenuLeft {
+  padding: 0 1rem 0 1rem;
+
+}
+
+.routeMenu .icon {
+  color: white;
+  padding: 1rem;
+  background: #f90716;
+  border-radius: 10px;
+  max-width: 2rem;
+  width: 20px;
+  height: 20px;
+}
+
+.routeName {
+  margin-left: 8px;
+}
+
+.dev {
+  font-family: "Anton";
+  letter-spacing: 0.5px;
+}
+
+.pod {
+  font-family: "Righteous";
+}
+
+.illu {
+  font-family: "Lobster Two";
+  font-weight: bold;
+}
+
 #routesMenuRight {
   background: #f3f3f3;
 }
@@ -119,10 +148,22 @@
 .routeMenu {
   padding: 0.5rem;
   position: relative;
+  cursor: pointer;
 } 
+
+.imgContainer {
+  transition: transform 0.2s;
+}
+
+.imgContainer:hover {
+  transform: scale(1.05);
+}
 
 .routeTitle {
   color: #f90716;
+  color: black;
+  display: flex;
+  align-items: center;
 }
 
 .description {
@@ -135,6 +176,7 @@
   border-radius: 10px;
   filter: brightness(0.7);
 }
+
 
 .galleryName {
   position: absolute;

@@ -1,5 +1,4 @@
 import Link from "next/link";
-// TODO: Use Image component instead of img tag
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState, useRef, useEffect } from "react";
@@ -8,10 +7,9 @@ import {
   faAngleDown,
   faAngleUp,
   faCode,
-  faMicrophone,
+  faMicrophoneLines,
   faPalette,
 } from "@fortawesome/free-solid-svg-icons";
-import { faQuestionCircle } from "@fortawesome/free-regular-svg-icons";
 
 import ActiveLink from "../miscellaneous/ActiveLink";
 import styles from "styles/Navbar.module.css";
@@ -98,12 +96,8 @@ function Navbar() {
         </li>
       </ul>
 
-      {/* Every selection in components? */}
+      {/* TODO: Every selection in components? */}
       <div id={styles.servicesMenu} ref={serviceMenu}>
-        <div className={styles.header}>
-          <h1>Services</h1>
-          <FontAwesomeIcon icon={faQuestionCircle} size="lg" />
-        </div>
         <div className={styles.menuContainer}>
           <div
             id={styles.routesMenuLeft}
@@ -112,65 +106,88 @@ function Navbar() {
             <div className={styles.routeMenu}>
               <Link href="/services/developer">
                 <a className={styles.routeTitle}>
-                  Developer
-                  <FontAwesomeIcon icon={faCode} />
-                  <p className={styles.description}>
-                    Lorem ipsum dolor sit amet
-                  </p>
+                  <FontAwesomeIcon className={styles.icon} icon={faCode} />
+                  <div>
+                    <div className={styles.routeName}>
+                      Developer
+                      <p className={styles.description}>
+                        Lorem ipsum dolor sit
+                      </p>
+                    </div>
+                  </div>
                 </a>
               </Link>
             </div>
             <div className={styles.routeMenu}>
               <Link href="/services/podcaster">
                 <a className={styles.routeTitle}>
-                  Podcaster
-                  <FontAwesomeIcon icon={faMicrophone} />
-                  <p className={styles.description}>
-                    Lorem ipsum dolor sit amet
-                  </p>
+                  <FontAwesomeIcon
+                    className={styles.icon}
+                    icon={faMicrophoneLines}
+                  />
+                  <div>
+                    <div className={styles.routeName}>
+                      Podcaster
+                      <p className={styles.description}>
+                        Lorem ipsum dolor sit
+                      </p>
+                    </div>
+                  </div>
                 </a>
               </Link>
             </div>
             <div className={styles.routeMenu}>
               <Link href="/services/illustrator">
                 <a className={styles.routeTitle}>
-                  Illustrator
-                  <FontAwesomeIcon icon={faPalette} />
-                  <p className={styles.description}>
-                    Lorem ipsum dolor sit amet
-                  </p>
+                  <FontAwesomeIcon className={styles.icon} icon={faPalette} />
+                  <div>
+                    <div className={styles.routeName}>
+                      Illustrator
+                      <p className={styles.description}>
+                        Lorem ipsum dolor sit
+                      </p>
+                    </div>
+                  </div>
                 </a>
               </Link>
             </div>
           </div>
-
           <div
             id={styles.routesMenuRight}
             className={styles.routesMenuContainer}
           >
-            <div className={styles.routeMenu}>
-              <img
+            <div className={`${styles.imgContainer} ${styles.routeMenu}`}>
+              <Image
                 className={styles.gallery}
-                src="/placeholders/code.jpg"
-                alt="Image not found"
+                width={"170px"}
+                height={"100px"}
+                src="/placeholders/gamedev.jpg"
               />
-              <h1 className={styles.galleryName}>CodeMadness</h1>
+              <h1 className={`${styles.dev} ${styles.galleryName}`}>
+                CodeMadness
+              </h1>
             </div>
-            <div className={styles.routeMenu}>
-              <img
+            <div className={`${styles.imgContainer} ${styles.routeMenu}`}>
+              <Image
                 className={styles.gallery}
-                src="/placeholders/podcast.jpg"
-                alt="Image not found"
+                width={"170px"}
+                height={"100px"}
+                src="/placeholders/podcastoffice.png"
               />
-              <h1 className={styles.galleryName}>Talking Sh*t</h1>
+              <h1 className={`${styles.pod} ${styles.galleryName}`}>
+                Talking Sh*t
+              </h1>
             </div>
-            <div className={styles.routeMenu}>
-              <img
+            <div className={`${styles.imgContainer} ${styles.routeMenu}`}>
+              <Image
+                width={"170px"}
+                height={"100px"}
                 className={styles.gallery}
-                src="/placeholders/draw.jpg"
-                alt="Image not found"
+                src="/placeholders/nicedraw.jpg"
               />
-              <h1 className={styles.galleryName}>Magnum Opus</h1>
+              <h1 className={`${styles.illu} ${styles.galleryName}`}>
+                Magnum Opus
+              </h1>
             </div>
           </div>
         </div>
