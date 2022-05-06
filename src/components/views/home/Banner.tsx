@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { useRef, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRightLong,
   faCode,
@@ -5,12 +8,33 @@ import {
   faPalette,
 } from "@fortawesome/free-solid-svg-icons";
 
-import styles from "styles/home/Banner.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "components/buttons/Button";
-import Link from "next/link";
+import styles from "styles/home/Banner.module.css";
 
 function Banner() {
+  const devBtn = useRef<HTMLButtonElement>(null);
+  const podBtn = useRef<HTMLButtonElement>(null);
+  const illuBtn = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    const btns = [devBtn.current, podBtn.current, illuBtn.current];
+    btns[0]?.focus({ preventScroll: true });
+
+    function handleMouseEnterEvent(btn: HTMLButtonElement | null): () => void {
+      return () => btn?.focus();
+    }
+
+    btns.forEach((btn) => {
+      btn?.addEventListener("mouseenter", handleMouseEnterEvent(btn));
+    });
+
+    return () => {
+      btns.forEach((btn) => {
+        btn?.removeEventListener("mouseenter", handleMouseEnterEvent(btn));
+      });
+    }
+  }, []);
+
   return (
     <section id={styles.banner}>
       <div id={styles.bannerContainer}>
@@ -32,21 +56,21 @@ function Banner() {
               </Link>
             </div>
             <div className={styles.services}>
-              <Button id={styles.devBtn} className="hvr-icon-up">
+              <Button id={styles.devBtn} className="hvr-icon-up" ref={devBtn}>
                 Developer
                 <FontAwesomeIcon
                   className={`hvr-icon ${styles.icon}`}
                   icon={faCode}
                 />
               </Button>
-              <Button id={styles.podBtn} className="hvr-icon-up">
+              <Button id={styles.podBtn} className="hvr-icon-up" ref={podBtn}>
                 Podcaster
                 <FontAwesomeIcon
                   className={`hvr-icon ${styles.icon}`}
                   icon={faMicrophoneLines}
                 />
               </Button>
-              <Button id={styles.illuBtn} className="hvr-icon-up">
+              <Button id={styles.illuBtn} className="hvr-icon-up" ref={illuBtn}>
                 Illustrator
                 <FontAwesomeIcon
                   className={`hvr-icon ${styles.icon}`}
