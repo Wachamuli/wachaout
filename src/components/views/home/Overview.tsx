@@ -1,3 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
+
+import Button from "components/buttons/Button";
 import Title from "components/miscellaneous/Title";
 import styles from "styles/home/Overview.module.css";
 
@@ -13,14 +17,18 @@ function Overview() {
             alt=""
           />
           <div className={styles.content}>
-            <h1>Game Development</h1>
+            <div className={styles.logoContainer}>
+              {/* <img className={styles.logo} src="#" alt="Image not found"/> */}
+            </div>
+            <h1 className={styles.serviceTitle}>Game Development</h1>
             <p className={styles.paragraph}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
               et repellat reprehenderit, repudiandae nesciunt asperiores enim
-              veniam labore expedita, ipsam beatae quaerat officia explicabo
-              nihil veritatis corporis? Iusto, placeat accusamus.
             </p>
-            <button className={styles.btn}>Check it out</button>
+            <Button className={styles.btn}>
+              More info
+              <FontAwesomeIcon icon={faArrowAltCircleRight} className={styles.icon} />
+            </Button>
           </div>
           <div className={styles.secondaryImageContainer}>
             <img

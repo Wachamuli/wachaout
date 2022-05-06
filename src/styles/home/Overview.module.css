@@ -22,25 +22,36 @@
   width: 65%;
 }
 
+.logoContainer {
+  background: #ffff;
+  margin: 0rem 0.5rem 1.5rem;
+  width: 10rem;
+  height: 10rem;
+  clip-path: circle();
+}
+
+.serviceTitle {
+  font-family: "Anton";
+  letter-spacing: 0.5px;
+}
+
 .paragraph {
-  margin: 1rem 0rem 1rem; 
+  margin: 0.5rem 0rem 3rem; 
+  width: 65%;
 }
 
 .btn {
-  padding: 1rem;
-  background: #fff;
-  border: none;
-  border-radius: 10px;
-  font: 1.1rem "Lobster Two";
-  width: 13rem;
-  margin-top: 3rem;
+  /* padding: 1rem; */
+}
+
+.icon {
+  margin-left: 5px;
 }
 
 .secondaryImageContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
   margin-left: 8px;
 }
 
