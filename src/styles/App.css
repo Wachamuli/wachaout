@@ -26,7 +26,6 @@
   font-size: 1.1rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden; /* IT CAN BE PROBLEMATIC */
 }
 
 #main {

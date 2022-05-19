@@ -17,9 +17,9 @@ function Overview() {
             alt=""
           />
           <div className={styles.content}>
-            <div className={styles.logoContainer}>
-              {/* <img className={styles.logo} src="#" alt="Image not found"/> */}
-            </div>
+            {/* <div className={styles.logoContainer}>
+              <img className={styles.logo} src="#" alt="Image not found"/>
+            </div> */}
             <h1 className={styles.serviceTitle}>Game Development</h1>
             <p className={styles.paragraph}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
