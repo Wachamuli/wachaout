@@ -1,8 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
-import Button from "components/buttons/Button";
 import styles from "styles/GalleryCard.module.css";
 
 interface Props {
@@ -26,7 +26,7 @@ function GalleryCard({
     <Link href={href}>
       <a>
         <div className={styles.card}>
-          <img className={styles.image} src={image} alt="Image not found" />
+          <Image className={styles.image} src={image} width={328.8} height={240} alt="Image not found" />
           <div className={styles.cardContainer}>
             <div className={styles.content}>
               <div className={styles.statusDate}>
@@ -40,10 +40,10 @@ function GalleryCard({
               </h1>
               <p className={styles.paragraph}>{description}</p>
               <div className={styles.btnContainer}>
-                <Button className="hvr-icon-forward">
-                  See more
-                  <FontAwesomeIcon className={`hvr-icon ${styles.icon}`} icon={faCircleArrowRight} />
-                </Button>
+                <label className={styles.seeMore}>
+                  SEE MORE
+                  <FontAwesomeIcon className={`hvr-icon ${styles.icon}`} icon={faArrowUpRightFromSquare} />
+                </label>
               </div>
             </div>
           </div>

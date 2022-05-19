@@ -1,8 +1,13 @@
 .card {
   border-radius: 10px;
   background: #ffff;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 4px 4px;
   transition: all 0.2s;
+}
+
+.card:hover {
   box-shadow: rgba(0, 0, 0, 0.8) 0px 8px 8px;
+  transform: scale(1.05);
 }
 
 .cardContainer {
@@ -46,14 +51,8 @@
 }
 
 .seeMore {
-  font-family: "Fira Sans";
-  text-align: right;
-  background: white;
-  color: #c9050c;
-  padding: 0.8rem;
-  font-size: 1rem;
-  border-radius: 10px;
-  border: none;
+  font: bold 1.1rem "Fira Sans";
+  color: #f90716;
 }
 
 .btnContainer {
