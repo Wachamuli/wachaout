@@ -7,7 +7,7 @@
 
 .image {
   border-radius: 10px;
-  filter: brightness(0.8);
+  filter: brightness(0.6);
 }
 
 .content {
@@ -23,16 +23,19 @@
 }
 
 .logoContainer {
-  background: #ffff;
+  /* background: #ffff; */
   margin: 0rem 0.5rem 1.5rem;
-  width: 10rem;
-  height: 10rem;
-  clip-path: circle();
+  /* width: 10rem; */
+  /* height: 10rem; */
+  /* clip-path: circle(); */
 }
 
 .serviceTitle {
-  font-family: "Anton";
-  letter-spacing: 0.5px;
+  font: bold 26.4px "Lobster Two";
+}
+
+.icon {
+  margin-left: 5px;
 }
 
 .paragraph {
@@ -41,7 +44,8 @@
 }
 
 .btn {
-  /* padding: 1rem; */
+  padding: 1rem 1rem;
+  border: none;
 }
 
 .icon {
@@ -49,18 +53,33 @@
 }
 
 .secondaryImageContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32%;
+}
+
+.title {
+  position: absolute;
+  color: white;
+  font-size: 26.4px;
+  z-index: 3;
+}
+
+.secondaryImages {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-left: 8px;
 }
 
+.secondaryImageContainer {
+  position: relative;
+}
+
 .secondaryImage {
-  height: 35%;
+  height: 100%;
   width: 100%;
 }
 
-#imageBetween {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
