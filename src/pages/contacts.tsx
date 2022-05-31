@@ -55,13 +55,13 @@ function Contacts() {
             icon={faEnvelope}
             size="10x"
           />
+          <h1 className={styles.subtitle}>Find me</h1>
           <h2 className={styles.header}>
             You can also do it through my social networks or by writing an email to
-            the corresponding address
+            the corresponding addresses.
           </h2>
-
           <div className={styles.socialIconsContainer}>
-            <SocialIcons className={styles.socialIcons} />
+            <SocialIcons className={styles.socialIcons} colored={true} />
             <ul className={styles.nickname}>
               <li className={styles.socialAddress}>/Wachamuli</li>
               <li className={styles.socialAddress}>/WachaDev</li>
@@ -71,16 +71,16 @@ function Contacts() {
           </div>
 
           <div className={styles.emailContainer}>
-            <h4>For your awesome project</h4>
-            <p>hello@wachaout.com</p>
+            <h4 className={styles.emailTitle}>For your awesome project</h4>
+            <p className={styles.emailParagraph}>hello@wachaout.com</p>
           </div>
           <div className={styles.emailContainer}>
-            <h4>Other related work</h4>
-            <p>interesting@wachaout.com</p>
+            <h4 className={styles.emailTitle}>Other related work</h4>
+            <p className={styles.emailParagraph}>interesting@wachaout.com</p>
           </div>
           <div className={styles.emailContainer}>
-            <h4>Fizz-Buzz</h4>
-            <p>fizzbuzz@wachaout.com</p>
+            <h4 className={styles.emailTitle}>Fizz-Buzz</h4>
+            <p className={styles.emailParagraph}>fizzbuzz@wachaout.com</p>
           </div>
         </div>
       </div>

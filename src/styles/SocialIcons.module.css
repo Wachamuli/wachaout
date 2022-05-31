@@ -6,9 +6,21 @@
 
 .socialIcon {
   font-size: 2rem;
-  color: var(vColor, black);
 }
 
-.socialIcon:hover {
-  color: rgb(255, 241, 42);
+#youtubeIcon {
+  color: #FF0000;
 }
+
+#githubIcon {
+  color: #171515;
+}
+
+#twitterIcon {
+  color: #1DA1F2;
+}
+
+#instagramIcon svg * {
+  fill: url(#gradient);
+}
+
