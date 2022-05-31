@@ -1,4 +1,5 @@
 import { faDisplay, faServer } from "@fortawesome/free-solid-svg-icons";
+import More from "components/buttons/More";
 
 import Title from "components/miscellaneous/Title";
 import Resource from "components/resources/Resource";
@@ -62,6 +63,9 @@ function Resources() {
             image="/resources/nextjs.png"
           />
         </ResourceCard>
+      </div>
+      <div className={styles.moreBtn}>
+        <More>See all resources</More>
       </div>
     </section>
   );

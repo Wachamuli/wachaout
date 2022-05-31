@@ -42,15 +42,6 @@
   font-size: 3rem;
 }
 
-.moreBtn {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  font: bold 1.1rem "Fira Sans";
-  color: #f90716;
-  width: fit-content;
-}
-
 .services {
   display: flex;
   margin: 4rem 0 2rem 0;

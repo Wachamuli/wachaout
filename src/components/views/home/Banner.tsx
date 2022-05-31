@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import Button from "components/buttons/Button";
+import More from "components/buttons/More";
 import styles from "styles/home/Banner.module.css";
 
 function Banner() {
@@ -45,15 +46,7 @@ function Banner() {
               <h1 id={styles.bannerSubtext}>
                 Web pages, Game Development, Nice Drawings, a Good Interview...
               </h1>
-              <Link href="/contacts">
-                <a className={`hvr-icon-forward ${styles.moreBtn}`}>
-                  More
-                  <FontAwesomeIcon
-                    icon={faArrowRightLong}
-                    className={`hvr-icon ${styles.icon}`}
-                  />
-                </a>
-              </Link>
+              <More>More</More>
             </div>
             <div className={styles.services}>
               <Button id={styles.devBtn} className="hvr-icon-up" ref={devBtn}>
