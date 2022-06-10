@@ -1,0 +1,19 @@
+.dateContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.circle {
+  font-size: 10px;
+  margin-right: 8px;
+}
+
+.date {
+  color: #f90716;
+  margin-right: 8px;
+}
+
+.projectTitle {
+  font-style: italic;
+}
