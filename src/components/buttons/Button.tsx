@@ -1,21 +1,28 @@
 import { BaseHtmlAttributes } from "../interfaces/BaseProps";
 import styles from "styles/Button.module.css";
 import { ForwardedRef, forwardRef } from "react";
+import Link from "next/link";
+
+interface Button extends BaseHtmlAttributes {
+  href?: string
+}
 
 const Button = forwardRef(
   (
-    { id, className, style, children }: BaseHtmlAttributes,
+    { id, className, style, children, href="#" }: Button,
     ref: ForwardedRef<HTMLButtonElement>,
   ) => {
     return (
-      <button
-        id={id}
-        className={`${className} ${styles.btn}`}
-        style={style}
-        ref={ref}
-      >
-        {children}
-      </button>
+      <Link href={href}>
+        <button
+          id={id}
+          className={`${className} ${styles.btn}`}
+          style={style}
+          ref={ref}
+        >
+          {children}
+        </button>
+      </Link>
     );
   },
 );

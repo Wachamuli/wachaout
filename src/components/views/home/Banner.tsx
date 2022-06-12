@@ -33,7 +33,7 @@ function Banner() {
       btns.forEach((btn) => {
         btn?.removeEventListener("mouseenter", handleMouseEnterEvent(btn));
       });
-    }
+    };
   }, []);
 
   return (
@@ -44,26 +44,44 @@ function Banner() {
             <div id={styles.bannerTitleContainer}>
               <h2>What are you looking for?</h2>
               <h1 id={styles.bannerSubtext}>
-                Web pages, Game Development, Nice Drawings, a Good Interview...
+                Web pages, <br />
+                Game Development, <br />
+                Nice Drawings, <br /> 
+                Good Interviews...
               </h1>
               <More>More</More>
             </div>
             <div className={styles.services}>
-              <Button id={styles.devBtn} className="hvr-icon-up" ref={devBtn}>
+              <Button
+                id={styles.devBtn}
+                className="hvr-icon-up"
+                href="/services/developer"
+                ref={devBtn}
+              >
                 Developer
                 <FontAwesomeIcon
                   className={`hvr-icon ${styles.icon}`}
                   icon={faCode}
                 />
               </Button>
-              <Button id={styles.podBtn} className="hvr-icon-up" ref={podBtn}>
+              <Button
+                id={styles.podBtn}
+                className="hvr-icon-up"
+                href="/services/podcaster"
+                ref={podBtn}
+              >
                 Podcaster
                 <FontAwesomeIcon
                   className={`hvr-icon ${styles.icon}`}
                   icon={faMicrophoneLines}
                 />
               </Button>
-              <Button id={styles.illuBtn} className="hvr-icon-up" ref={illuBtn}>
+              <Button
+                id={styles.illuBtn}
+                className="hvr-icon-up"
+                href="/services/illustrator"
+                ref={illuBtn}
+              >
                 Illustrator
                 <FontAwesomeIcon
                   className={`hvr-icon ${styles.icon}`}
@@ -76,9 +94,7 @@ function Banner() {
           <div id={styles.bannerRightSide}>
             <div className={styles.entireLogo}>
               <div className={styles.pattern}></div>
-              <div className={styles.logo}>
-                {/* <Image id={styles.logoImage} alt="" /> */}
-              </div>
+              <div className={styles.logo}>{/* TODO: A photo of me */}</div>
             </div>
           </div>
         </div>

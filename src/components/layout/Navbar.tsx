@@ -103,6 +103,7 @@ function Navbar() {
             id={styles.routesMenuLeft}
             className={styles.routesMenuContainer}
           >
+            <h2 className={styles.label}>Available services</h2>
             <div className={styles.routeMenu}>
               <Link href="/services/developer">
                 <a className={styles.routeTitle}>
@@ -111,7 +112,7 @@ function Navbar() {
                     <div className={styles.routeName}>
                       Developer
                       <p className={styles.description}>
-                        Lorem ipsum dolor sit
+                        Game and web dev
                       </p>
                     </div>
                   </div>
@@ -129,7 +130,7 @@ function Navbar() {
                     <div className={styles.routeName}>
                       Podcaster
                       <p className={styles.description}>
-                        Lorem ipsum dolor sit
+                        Interviews and more
                       </p>
                     </div>
                   </div>
