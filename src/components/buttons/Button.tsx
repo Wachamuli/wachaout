@@ -1,7 +1,8 @@
 import { BaseHtmlAttributes } from "../interfaces/BaseProps";
-import styles from "styles/Button.module.css";
 import { ForwardedRef, forwardRef } from "react";
 import Link from "next/link";
+
+import styles from "styles/Button.module.css";
 
 interface Button extends BaseHtmlAttributes {
   href?: string

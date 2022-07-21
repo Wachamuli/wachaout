@@ -16,5 +16,6 @@
 .btn:hover,
 .btn:focus,
 .btn:active {
+  color: black;
   background: yellow; 
 }

@@ -34,11 +34,11 @@ function Contacts() {
               id={styles.textarea}
               cols={30}
               rows={10}
-              placeholder="Hi there! I want your for my awesome project."
+              placeholder="Hi there! I want you for my awesome project."
               required
             ></textarea>
             <div className={styles.btnContainer}>
-              <Button className={`hvr-icon-float-away ${styles.btn}`}>
+              <Button className={styles.btn}>
                 Send Message
                 <FontAwesomeIcon
                   className={`hvr-icon ${styles.icon}`}

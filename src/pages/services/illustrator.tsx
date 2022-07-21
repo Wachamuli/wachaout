@@ -1,4 +1,9 @@
+import ComingSoon from "components/miscellaneous/ComingSoon";
 
-function Illustrator() {}
+function Illustrator() {
+  return (
+    <ComingSoon />
+  )
+}
 
 export default Illustrator;
