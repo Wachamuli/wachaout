@@ -4,6 +4,7 @@ import More from "components/buttons/More";
 import Title from "components/miscellaneous/Title";
 import Resource from "components/resources/Resource";
 import ResourceCard from "components/resources/ResourceCard";
+
 import styles from "styles/Resources.module.css";
 
 function Resources() {
@@ -25,16 +26,16 @@ function Resources() {
             height="100px"
           />
           <Resource
+            name="Font Awesome"
+            tagline="Take the hassle out of icons in your projects"
+            image="/resources/react.png"
+            height="130px"
+          />
+          <Resource
             name="Bootstrap"
             tagline="Build fast, responsive sites"
             image="/resources/bootstrap.png"
             height="180px"
-          />
-          <Resource
-            name="Font Awesome"
-            tagline="Take the hassle out of icons in your projects"
-            image="/resources/fontawesome.png"
-            height="50px"
           />
         </ResourceCard>
 

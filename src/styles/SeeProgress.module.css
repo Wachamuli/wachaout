@@ -4,12 +4,12 @@
 
 .gallery {
   display: grid;
-  gap: 8px;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  align-items: center;
 }
 
 .imageContainer {
-  border: 5px solid black;
   border-radius: 10px;
 }
 
@@ -19,6 +19,26 @@
   height: 100%;
 }
 
-#mainImage {
-  grid-column: 1/4;
+/* #mainImage {
+} */
+
+.moveBtnsContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.moveBtns {
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+
+.moveBtn {
+  color: #f90716;
+}
+
+.moveBtn:hover {
+  cursor: pointer;
 }
