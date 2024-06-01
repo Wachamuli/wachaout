@@ -65,19 +65,19 @@
   margin-left: 5px;
 }
 
-.support {
+.supportBtn {
   border-radius: 10px;
   background: white;
-  padding: 0.5rem;
+  padding: 0.5rem 0rem 0.5rem 0rem;
   background: rgb(255, 241, 42);
   border: 3px solid black;
   padding-right: 1rem;
   padding-left: 1rem;
+  color: black;
 }
 
-.supportBtn {
-  color: black;
-  padding: 0.5rem;
+.supportBtn:hover {
+  border-style: outset;
 }
 
 #servicesMenu {

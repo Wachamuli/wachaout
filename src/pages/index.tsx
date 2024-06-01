@@ -17,7 +17,7 @@ export default function Home() {
           maiores. Voluptate alias hic mollitia incidunt adipisci,
           consectet quasi. Aut assumenda consectetur vero dicta fugit
           placeat exercitationem ea necessitatibus, odio"
-        picture="https://i.picsum.photos/id/1025/4951/3301.jpg?hmac=_aGh5AtoOChip_iaMo8ZvvytfEojcgqbCH7dzaz-H8Y"
+        picture="https://picsum.photos/id/237/200/300"
       />
       <Aptitudes/>
       <GallerySelector/>

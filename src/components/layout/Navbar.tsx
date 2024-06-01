@@ -89,7 +89,7 @@ function Navbar() {
           </ActiveLink>
         </li>
 
-        <li className={styles.support}>
+        <li>
           <Link href="/support">
             <a className={styles.supportBtn}>SUPPORT</a>
           </Link>
@@ -111,9 +111,7 @@ function Navbar() {
                   <div>
                     <div className={styles.routeName}>
                       Developer
-                      <p className={styles.description}>
-                        Game and web dev
-                      </p>
+                      <p className={styles.description}>Game and web dev</p>
                     </div>
                   </div>
                 </a>
@@ -129,9 +127,7 @@ function Navbar() {
                   <div>
                     <div className={styles.routeName}>
                       Podcaster
-                      <p className={styles.description}>
-                        Interviews and more
-                      </p>
+                      <p className={styles.description}>Interviews and more</p>
                     </div>
                   </div>
                 </a>
